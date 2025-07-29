@@ -1,6 +1,4 @@
-# garmin-g5
-
-## G5 – Instrumento Eletrônico de Voo em HTML
+# Garmin G5 – Instrumento Eletrônico de Voo em HTML
 
 
 ## Teclas de comandos para testes
