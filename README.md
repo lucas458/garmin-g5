@@ -2,7 +2,6 @@
 
 
 ## Teclas de comandos para testes
-
 | Ação          | Teclas                      |
 | ------------- |:---------------------------:|
 | Speed         | `1` ou `2`                  |
@@ -10,6 +9,10 @@
 | Pitch         | `ArrowUp` ou `ArrowDown`    |
 | Roll          | `ArrowLeft` ou `ArrowRight` |
 | Yaw           | `q` ou `e`                  |
+
+## Controle via KNOB
+| Ação          | Teclas                      |
+| ------------- |:---------------------------:|
 | Click Knob    | `Scroll Button`             |
 | Girar Knob    | `Scroll`                    |
 
