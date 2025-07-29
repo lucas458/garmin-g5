@@ -1,0 +1,1934 @@
+
+#topContainer{
+    width: 168px;
+    height: 25px; 
+    left: 66px;
+    top: 14px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+
+#leftContainer{
+    width: 66px;
+    height: calc(100% - 14px);
+    top: 14px;
+    overflow: hidden;
+
+    
+}
+
+
+
+#speedColorList{
+    position: absolute;
+    left: 59px;
+    bottom: 113px;
+}
+#speedColorList > div{
+    width: 7px;
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+#rightContainer{
+    width: 86px;
+    height: calc(100% - 14px);
+    right: 0; 
+    top: 14px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*** UPPER CONTENT ***/
+#topContent{
+    width: 100%;
+    height: 14px;
+    /* background-color: #ff000080; */
+    background-color: #000;
+    z-index: 1;
+    position: relative;
+}
+
+.topContentDivider{
+    width: 2px;
+    height: 12px;
+    background-color: #fff;
+    position: absolute;
+    top: 1px;
+    left: 102px;
+}
+
+.topContentDivider:nth-child(2){
+    left: 160px;
+}
+
+
+#topContentList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.topContentTextContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(102, 51, 153, 0.719); */
+    padding: 0 6px;
+}
+
+
+.topContentTextContainer:first-child{
+    width: 103px;
+    flex-shrink: 0;
+    text-align: right;
+    padding-right: 16px;
+}
+.topContentTextContainer:last-child{
+    width: 159px;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    padding-left: 16px;
+    gap: 24px;
+}
+
+
+.topContentText{
+    color: #0f0;
+    /* width: 100%; */
+}
+
+.topContentTextWhite{
+    color: #fff;
+}
+
+.topContentTextContainer:first-child .topContentText{
+    width: 100%;
+}
+
+
+
+
+
+/*** AT-TOP ***/
+
+#pseudoTopContainer{
+    width: 168px;
+    height: 34px;
+    left: 66px;
+    top: 14px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+/* HEADING COURSE */
+#headingCourse{
+    border: 1px solid #000;
+    background-color: #46b34c;
+    width: 4px;
+    height: 16px;
+    position: relative;
+    left: 93px;
+    top: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+/*** TOP ***/
+#topContainer > div{
+    position: absolute;
+}
+
+
+
+
+/* HEADING STRIP */
+
+#headingStrip{
+    position: relative;
+    bottom: 0;
+    left: -10px;
+    transform: translateX(0px);
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    color: #ababa9;
+}
+
+.miniTickLongVertical{
+    width: 2px;
+    height: 7px;
+    background-color: #ababa9;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.miniTickLongVertical > div{
+    transform: translateY(-14px);
+}
+
+.miniTickShortVertical{
+    width: 1px;
+    height: 4px;
+    background-color: #ababa9;
+}
+
+
+
+
+
+
+/* HEADING BUG */
+#headingBug{
+    transform: translateX(0px);
+    position: absolute;
+    left: 90px;
+    top: 6px;
+}
+
+#headingBug svg{
+    transform: scale(0.7) rotate(-90deg);
+}
+
+
+
+/* HEADING READOUT */
+.headingReadout{
+    width: 40px;
+    height: 16px;
+    /* background-color: #ff000061; */
+    border: 1px solid #ababa9;
+    background-color: #000;
+    margin: auto;
+    /* left: 27px; */
+    left: 23px;
+    right: 0;
+}
+
+    
+
+.headingReadoutValue{
+    display: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: #bb509d;
+    padding-left: 6px;
+
+}
+
+.headingReadoutValue > div{
+    position: absolute;
+    right: 1px;
+    bottom: 0;
+    font-size: 7px;
+    color: #bb509d;
+}
+
+.headingReadoutTRK{
+    background-color: #000;
+    height: 16px;
+    border: 1px solid #ababa9;
+    color: #bb509d;
+    position: absolute;
+    top: -1px;
+    right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    transform: translateX(1px);
+}
+
+.headingReadoutTRK::after{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: #000;
+    position: relative;
+    left: 1px;
+}
+
+
+.headingReadoutTriangle{
+    width: fit-content;
+    border: 6px solid transparent;
+    border-top-color: #ababa9;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0px;
+    right: 0;
+}
+
+
+.headingReadoutTriangle::after{
+    content: '';
+    display: block;
+    border: 5px solid transparent;
+    border-top-color: #000;
+    margin: auto;
+    transform: translateY(0.5px);
+    position: absolute;
+    top: -7px;
+}
+
+
+
+/* HEADING GROUND TRACK */
+#headingGroundTrackTriangle{
+    border: 6px solid transparent;
+    border-bottom-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 89px;
+    top: 13px;
+    z-index: 1;
+}
+
+#headingGroundTrackTriangle::after{
+    content: '';
+    display: block;
+    border: 4px solid transparent;
+    border-bottom-color: #bb509d;
+    margin: auto;
+    transform: translateY(1px);
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+/*** LEFT ***/
+
+
+
+/* Vspeed Reference Normal */
+#verticalSpeedReferenceListNormal{
+    width: 21px;
+    height: 240px;
+    /* background-color: rebeccapurple; */
+    /* box-shadow: inset 0 0 5px 0 #000; */ 
+    /* z-index: 1; */
+    overflow: hidden;
+    position: absolute;
+    left: 66px;
+    top: 0;
+}
+
+#verticalSpeedReferenceListNormalMoving{
+    position: relative;
+    top: 122px; 
+}
+
+#verticalSpeedReferenceListNormalMoving .verticalSpeedReference{
+    transform: translateY(0px);
+    position: absolute;
+}
+
+#verticalSpeedReferenceListNormal .verticalSpeedReferenceLetter{
+    /* position: absolute; */
+    left: 5px;
+    top: 0;
+}
+
+
+
+/*  */
+
+#pseudoLeftContainer{
+    width: 88px;
+    height: 78px;
+    /* background-color: red; */
+    z-index: 1;
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column-reverse;
+} 
+
+
+
+#pseudoLeftContainerMoving{
+    transform: translateY(0px);
+    transition: 100ms;
+}
+
+.showGroundSpeedOnly #pseudoLeftContainerMoving{
+    transform: translateY(-20px);
+}
+
+.showGroundSpeedAndTemperature #pseudoLeftContainerMoving{
+    transform: translateY(-34px);
+} 
+
+
+
+
+
+    
+
+#bearingDistance div:first-child{
+    color: #fff;
+}
+
+
+
+
+
+#currentDesiredTrackContainer{
+    z-index: 1;
+    bottom: 15px;
+}
+
+#outsideAirTemperatureContainerHsi{
+    bottom: 0;
+}
+
+#bearingDistance{
+    right: 0;
+}
+
+
+#batteryInformation{
+    font-size: 8px;
+}
+
+
+#windInformation{
+    top: 13px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#windArrow{
+    width: 16px;
+    height: 16px;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+#windArrow::after{
+    content: '';
+    width: 4px;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+}
+
+#windArrow svg{
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+#headingDesired{
+    width: 66px;
+    height: 20px;
+    border: 2px solid #6dcad8;
+    padding-right: 8px;
+    background-color: #000;
+    font-weight: 600;
+    color: #6dcad8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    right: 0;
+}
+
+
+#headingDesiredSymbol{
+    width: 6px;
+    height: 14px;
+    background-color: #6dcad8;
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+
+#headingDesiredSymbol::after{
+    content: '';
+    border: 3px solid transparent;
+    border-right-color: #000;
+}
+
+
+
+
+
+
+#interface_B .headingReadout{
+    left: 0; 
+    transform: translateX(-0.4px);
+}
+
+
+
+
+/* SPEED UNIT */
+#speedUnit{ 
+    text-align: center;
+    position: absolute;
+    left: 2px;
+    bottom: 0;
+}
+
+
+
+/* VERTICAL SPEED REFERENCE -- STATIC */
+
+#verticalSpeedReferenceListStaic{ 
+    height: 100%;
+    /* padding-bottom: 30px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    left: -19px;
+    /* z-index: 1; */
+}
+
+
+
+
+
+.verticalSpeedReference{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #6dcad8;
+    height: 15px;
+}
+
+
+.verticalSpeedReferenceValue{
+    /* background-color: green; */
+    width: 100%;
+    padding-right: 5px;
+}
+
+
+.verticalSpeedReferenceLetter{
+    width: fit-content;
+    height: 10px;
+    max-width: 16px;
+    flex-shrink: 0;
+    padding: 0 2px;
+
+    background-color: #000;
+
+    font-size: 8px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    left: calc(100% + 2px);
+}
+.verticalSpeedReferenceLetter::after{
+    content: '';
+    display: block;
+    border: 5px solid transparent;
+    border-right-color: #000;
+    height: fit-content;
+    margin: auto;
+    position: absolute;    
+    top: 0;
+    bottom: 0;
+    right: 100%;
+}
+
+
+
+
+
+/* SPEED STRIP */
+#speedStrip{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 18px;
+    position: absolute;
+    right: 0;
+    top: -1088px;
+}
+
+#speedStrip > div{
+    background-color: #ababa9;
+} 
+
+
+#speedStrip > div:last-child{
+    margin: 0;
+}
+
+#speedStrip .bigTickLong{
+    display: flex;
+    align-items: center; 
+}
+
+#speedStrip .bigTickLong > div:first-child{ 
+    flex-shrink: 0; 
+}
+#speedStrip .bigTickLong > div:last-child{
+    width: 36px;
+    flex-shrink: 0;
+    text-align: right;
+    margin-left: -44px; 
+    color: #ababa9;
+}
+
+
+
+
+
+/* SPEED BUG */
+#speedBug{
+    transform: translateY(0px);
+    position: absolute;
+    right: 0;
+    top: 99px;
+}
+#speedBug svg{
+    transform: rotate(180deg);
+}
+
+
+
+/* SPEED READOUT */
+#speedReadout{
+    height: 60px;
+    width: 58px;
+    /* background-color: #ff000070; */
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+}
+
+
+#speedReadoutLeft{
+    width: 34px;
+    height: 30px;
+    border: 1px solid #ababa9;
+    background-color: #000;
+    display: flex;
+    gap: 2px;
+    padding-top: 5px;
+    padding-left: 5px;
+    overflow: hidden;
+}
+
+#speedReadoutLeft > div{
+    position: relative;
+    top: -200px;
+}
+
+#speedReadoutLeft > div:first-child{
+    visibility: hidden;
+}
+
+
+#speedReadoutRight{
+    width: 16px;
+    height: 60px;
+    border: 1px solid #ababa9;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#speedReadoutRight > div{
+    position: relative;
+    top: -200px;
+}
+
+
+#speedReadoutVline{
+    background-color: #000;
+    width: 2px;
+    height: 28px;
+    position: relative;
+    top: 0px;
+    right: 17px;
+}
+
+#speedReadoutTriangle{
+    border: 8px solid transparent;
+    border-left-color: #ababa9;
+    position: absolute;
+    right: -7px;
+}
+
+
+#speedReadoutTriangle::after{
+    content: '';
+    display: block;
+    border: 7px solid transparent;
+    border-left-color: #000;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0px;
+    left: -8px;
+    transform: translateX(-0.5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** RIGHT ***/
+#rightContainer > div{
+    position: absolute;
+}
+
+
+
+/* ALTITUDE STRIP */
+#altitudeStrip{
+    /* top: 53px; */
+    /* top: -35887px; */
+    /* top: -35888px; */
+    top: -17888px;
+    transform: translateY(0px); 
+}
+
+#altitudeStrip > div{
+    margin-bottom: 10px;
+}
+
+#altitudeStrip > div:last-child{
+    margin: 0;
+}
+
+#altitudeStrip .bigTickLong{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+#altitudeStrip .bigTickLong > div:first-child{
+    /* width: 26px; */
+    /* background-color: #00ff0080; */
+    /* color: red; */ 
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+#altitudeStrip .bigTickLong > div:last-child{
+    width: 23px;
+    /* background-color: #ffff0080; */
+    /* color: blue; */ 
+    flex-shrink: 0;
+}
+
+#altitudeStrip > div{
+    color: #ababa9;
+    background-color: #ababa9;
+}
+
+.autopilotAutitude > div{
+    color: #6dcad8;
+}
+
+
+
+
+
+
+
+
+
+#altitudeBug{
+    width: 11px;
+    height: 28px;
+    /* background-color: red; */
+    position: absolute;
+    left: 0;
+    top: 99px;
+}
+
+
+
+
+
+
+
+
+/* SPEED DESIRED */
+#speedDesired{
+    z-index: 1;
+    position: relative;
+    padding-right: 4px;
+}
+
+
+/* VERTICAL SPEED DESIRED */
+#verticalSpeedDesired{
+    bottom: 0px;
+    z-index: 2;
+    transition: 100ms;
+}
+
+#verticalSpeedDesired.verticalSpeedDesiredVisible{
+    bottom: 20px !important;
+}
+
+
+#verticalSpeedDesired,
+#speedDesired,
+#altitudeDesired{
+    width: 100%;
+    height: 20px;
+    border: 1px solid #ababa9;
+    /* background-color: #00000080; */
+    background-color: #000;
+    font-weight: 600;
+    color: #6dcad8;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    left: 0; 
+}
+
+
+#verticalSpeedDesiredSymbol,
+#speedDesiredSymbol,
+#altitudeDesiredSymbol{
+    width: 6px;
+    height: 14px;
+    background-color: #6dcad8;
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#verticalSpeedDesiredSymbol{
+    margin-right: 4px;
+}
+
+
+#verticalSpeedDesiredSymbol::after,
+#speedDesiredSymbol::after{
+    content: '';
+    border: 3px solid transparent;
+    border-left-color: #000;
+
+}
+
+#altitudeDesiredSymbol::after{ 
+    content: '';
+    border: 3px solid transparent;
+    border-right-color: #000;
+}
+
+#verticalSpeedDesiredValue,
+#speedDesiredValue,
+#altitudeDesiredValue{
+    width: 55px;
+    /* background-color: #66339987; */
+    text-align: right;
+    /* margin-right: 15px; */
+}
+
+
+#verticalSpeedDesiredValue{
+    flex: 1;
+    padding-right: 4px;
+}
+
+#altitudeDesiredValue{
+    flex: 1;
+}
+
+
+
+.altitudeDesiredYellow{
+    color: #ffc107 !important;
+}
+.altitudeDesiredYellow #altitudeDesiredSymbol{
+    background-color: #ffc107 !important;
+}
+
+
+/* #speedDesired > div:nth-child(2),
+#altitudeDesired > div:last-child{
+    font-size: 8px;
+    line-height: 8px;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 7px;
+} */
+
+
+
+
+/* ALTITUDE ADJUST */
+
+#altitudeAdjustContainer{
+    width: 100%;
+    height: 20px;
+    border: 2px solid #6dcad8;
+    background-color: #000;
+    color: #6dcad8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 2;
+}
+
+#altitudeAdjust{
+    width: 46px;
+    text-align: right;
+    padding-right: 1px;
+}
+
+#altitudeAdjustContainer > div:last-child{
+    font-size: 8px;
+    line-height: 8px;
+    /* transform: translateY(1px); */
+    text-align: center;
+}
+
+#altitudeAdjustContainer > div:last-child > div:last-child{
+    line-height: 6px;
+}
+
+
+/* VERTICAL SPEED */
+#veriticalSpeed{
+    width: 20px;
+    height: 170px;
+    /* background-color: #0000ff80; */
+    color: #ababa9;
+    right: 0;
+    top: 29px;
+}
+
+
+#verticalSpeedStrip{
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(24, 1fr);
+    justify-items: end;
+}
+
+
+#verticalSpeedStrip .miniTickLong div{ 
+    width: 20px;
+    text-align: right; 
+    position: relative;
+    left: -20px;
+    top: -4px;
+}
+
+
+#verticalSpeedIndicator{
+    height: fit-content;
+    border: 7px solid transparent;
+    border-left-color: #000;
+    z-index: 2;
+    transform: translateY(0px);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: -7px;
+}
+
+
+#verticalSpeedIndicator::after{
+    content: '';
+    display: block;
+    border: 5px solid transparent;
+    border-left-color: #fff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: -4px;
+}
+
+
+#verticalSpeedIndicatorBox{
+    width: 4px;
+    height: 0px;
+    transform: rotate(0deg);
+    transform-origin: center top;
+    background-color: #bb509d;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    right: 1px;
+}
+
+
+
+
+
+.miniTickLong,
+.miniTickShort{
+    width: 7px;
+    height: 2px;
+    background-color: #ababa9;
+}
+
+.miniTickShort{
+    width: 4px;
+    height: 1px;
+}
+
+
+
+.bigTickLong,
+.bigTickShort{
+    width: 10px;
+    height: 2px;
+}
+
+.bigTickShort{
+    width: 7px;
+}
+
+
+
+
+
+
+/* ALTITUDE READOUT */
+#altitudeReadout{
+    position: relative;
+    width: 30px;
+    height: 2px;
+    /* background-color: blue; */
+    margin: auto;
+    top: -2px;
+    bottom: 0; 
+
+}
+
+#altitudeReadout > div{
+    position: absolute;
+}
+
+
+#altitudeReadoutTriangle{
+    border: 8px solid transparent;
+    border-right-color: #ababa9;
+    margin: auto; 
+    top: 2px;
+    bottom: 0;
+    left: -4px;
+}
+
+#altitudeReadoutTriangle::after{
+    content: '';
+    display: block;
+    border: 7px solid transparent;
+    border-right-color: #000;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0px;
+    left: -5px;
+    transform: translateX(-0.5px);
+}
+
+
+#altitudeReadoutLeft{
+    border: 1px solid #ababa9;
+    background-color: #000;
+    width: 41px;
+    height: 30px;
+    left: 11px;
+    top: -13px;
+    display: flex; 
+    padding-top: 5px;
+    padding-left: 2px;
+
+    overflow: hidden;
+}
+
+/* #altitudeReadoutLeft::after{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 1;
+} */
+
+
+
+#altitudeReadoutLeft.altitudeReadoutNegative::after{
+    content: '-';
+    color: #fff;
+    position: absolute;
+    left: calc(41px / 3 * 0 ); 
+    width: calc(41px / 3);
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center; 
+    font-size: 28px;
+    margin: -4px 0px 0px 0px;
+    font-family: "DejaVuSans";
+}
+
+.altitudeReadoutNegative.altitudeReadoutNegative100::after{
+    left: calc(41px / 3 * 1) !important;
+}
+
+
+
+#altitudeReadoutVline{
+    width: 1px;
+    height: 28px;
+    background-color: #000;
+    position: absolute;
+    left: 51px;
+    top: -12px;
+}
+
+
+#altitudeReadoutLeft .numberContainer{
+    position: relative;
+    top: -201px;
+}
+
+#altitudeReadoutLeft .numberContainer:not(:last-child){
+    visibility: hidden;
+}
+
+
+
+#altitudeReadoutRight{
+    width: 28px;
+    height: 50px;
+    border: 1px solid #ababa9;
+    background-color: #000;
+    left: 51px;
+    top: -23px;
+
+    overflow: hidden;
+}
+
+#altitudeReadoutRight .numberContainer{
+    position: relative;
+    /* top: -106px; */
+    top: -206px;
+}
+
+
+.numberContainer > div{
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+}
+
+
+
+
+
+
+
+
+
+
+/*** CENTER ***/
+
+
+
+#centerContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* background-color: #ff000080; */
+    overflow: hidden;
+    /* opacity: 0.5; */
+}
+
+
+
+
+/* SKY & GROUND */
+#skyGroundRotation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    top: 7px;
+    position: relative;
+    transform: rotate(0deg);
+}
+
+#skyGroundRotation > div{
+    flex-shrink: 0;
+}
+
+#skyGroundMoving{
+    transform: translateY(0px);
+}
+
+#sky, #ground{
+    width: 480px;
+    height: 864px;
+    background-color: #3858ff;
+}
+
+#ground{
+    background-color: #683a01;
+}
+
+#hLine{
+    width: 480px;
+    height: 2px;
+    background-color: #fff;
+}
+
+
+
+/* LADDER */
+#ladderContainer{
+    width: 152px;
+    height: 152px;
+    /* background-color: #ff000080; */
+    border-radius: 150px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 13px; */
+    top: 29px;
+    bottom: 0; 
+
+    overflow: hidden;
+}
+
+
+#ladderRotation{
+    display: flex;
+    align-items: baseline;
+    height: 100%;
+    transform: rotate(0deg);
+    position: relative;
+    top: -8px;
+}
+
+
+#ladderMoving{
+    width: 100%;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6.5px;
+    transform: translateY(0px);
+}
+
+
+
+.ladderLineLong::before,
+.ladderLineLong::after{
+    content: attr(value);
+    display: block;
+    /* background-color: gold; */
+    width: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    text-align: right;
+    left: -24px;
+} 
+
+.ladderLineLong::after{  
+    left: 42px;
+}
+
+
+.ladderLineLong{
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.ladderLineMedium{
+    width: 33px;
+}
+
+.ladderLineSmall{
+    width: 18px;
+    height: 1px;
+}
+
+.ladderLineLong, .ladderLineMedium, .ladderLineSmall{
+    background-color: #fff;
+    flex-shrink: 0;
+}
+
+.ladderLineLong, .ladderLineMedium, #ladderLineHorizon{
+    height: 2px;
+}
+
+#ladderLineHorizon{
+    width: 100%; 
+    /* background-color: green; */
+    flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+/* GLIDE & LOCALIZER -- GENERIC */
+
+.glideLocalizerContainer{
+    width: 116px;
+    height: 16px;
+    /* background-color: red; */
+    border: 1px solid #ababa9;
+    background-color: #00000080;
+    position: absolute;
+    left: 102px;
+    top: 187px;
+}
+
+.glideLocalizerTickList{
+    height: 100%;
+    /* padding: 0 9px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.glideLocalizerTickList > div{
+    width: 8px;
+    height: 8px;
+    /* aspect-ratio: 1/1; */
+    border: 1px solid #ababa9;
+    border-radius: 50%; 
+}
+
+.glideLocalizerTickList > div:nth-child(3){
+    width: 2px;
+    height: 100%;
+    /* background-color: red; */
+    border-radius: 0px;
+}
+
+
+/* LOCALIZER */
+
+.glideLocalizerThumbTriangle{
+    width: fit-content;
+    border: 7px solid transparent;
+    border-bottom-color: #bb509d;
+    transform: scaleY(1.5) translate(0px, -3px);
+    margin: auto;
+
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} 
+
+
+/* GLIDESLOPE */
+
+#glideslopeContainer{
+    z-index: 1;
+    transform: rotate(90deg);
+    left: 168px;
+    top: 119px;
+}
+
+
+.glideLocalizerThumbDiamond{
+    width: fit-content;
+    border: 7px solid transparent;
+    border-left-color: #bb509d; 
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 13px;
+    right: 0;
+}
+
+.glideLocalizerThumbDiamond::after{
+    content: '';
+    display: block;
+    border: 7px solid transparent;
+    border-right-color: #bb509d;
+    /* margin: auto; */
+    position: absolute;
+    transform: translateX(-100%);
+}
+
+
+.glideLocalizerThumbDiamondGreen{
+    border-left-color: #46b34c;
+}
+
+.glideLocalizerThumbDiamondGreen::after{
+    border-right-color: #46b34c;
+}
+
+
+
+
+
+
+/* SLIP/SKID INDICATOR */
+
+
+#slipIndicatorContainer{
+    width: 30px;
+    height: 24px;
+    /* background-color: rebeccapurple; */
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 11px;
+}
+
+
+.slipIndicatorBar{
+    width: 4px;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #000;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+#slipIndicatorBall{
+    height: calc(100% - 2px);
+    width: 100%;
+    /* aspect-ratio: 1/1; */
+    border: 1px solid #000;
+    border-radius: 50%;
+    box-shadow: inset 0 0 4px 0 #000;
+    background-color: #fff;
+    transform: translateX(0px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TURN RATE INDICATOR */
+#turnRateIndicatorContainer{
+    width: 120px;
+    height: 10px;
+    /* background-color: red; */
+    margin: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+#turnRateIndicatorTop{
+    width: 100%;
+    height: 1px;
+    background-color: #00000080;
+    border-radius: 50%;
+}
+
+
+#turnRateIndicatorBottom{
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: gold; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 17px;
+}
+
+#turnRateIndicatorBottom > div{
+    width: 3px;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+#turnRateIndicatorBottom > div:nth-child(2){
+    width: 2px;
+    background-color: #00000080;
+    border: none;
+}
+
+/* #turnRateIndicatorBottom > div:nth-child(odd){
+    transform: translateY(1px);
+} */
+
+
+#turnRateIndicatorTrendContainer{
+    width: 50%;
+    height: 9px;
+    /* background-color: yellow; */
+    margin: auto;
+    position: absolute;
+    /* left: 0; */
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transform-origin: left 4px;
+    transform: rotate(0deg);
+}
+
+
+#turnRateIndicatorTrend{
+    width: 56px;
+    height: 8px;
+    background-color: #bb509d;
+    transform: translateX(-60px);
+}
+
+#turnRateIndicatorTrend::after{
+    width: fit-content;
+    content: '';
+    display: block;
+    border: 4px solid transparent;
+    border-left-color: #bb509d;
+    /* transform: translateX(100%); */
+    /* right: 4px; */
+    left: 100%;
+    position: absolute;
+}
+
+.turnRateIndicatorTrendToLeft{
+    transform: rotate(180deg) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FLIGHT DIRECTOR */
+#flightDirectorContainer{
+    width: 96px;
+    height: 96px;
+    /* background-color: red; */
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13px;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flightDirectorContainer > div{
+    border: 1px solid #000;
+    background-color: #bb509d;
+    position: absolute;
+}
+
+#flightDirectorVertical{
+    width: 4px;
+    height: 100%;
+    transform: translateX(0px);
+}
+
+#flightDirectorHorizontal{
+    width: 100%;
+    height: 4px;
+    transform: translateY(0px);
+}
+
+
+
+
+
+
+
+
+
+/* FLIGHT DIRECTOR -- FIXED */
+
+#flightDirectorFixed{
+    /* width: fit-content; */
+    display: flex;
+    justify-content: center; 
+    /* padding: 0 128px; */
+    position: absolute;
+    top: 13px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+
+
+#flightDirectorFixed img{
+    transform: translateY(7px);
+}
+
+#flightDirectorFixed img:first-child{
+    transform: scaleX(-1) translateY(7px);
+}
+
+
+
+#flightDirectorFixexCircle{
+    width: 6px;
+    height: 6px; 
+    margin: 0 20px;
+    background-color: #f5e914;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+
+#flightDirectorContainer:not(.flightDirectorVisible),
+#flightDirectorFixed:not(.flightDirectorVisible)
+{
+    display: none;
+}
+
+
+
+
+
+
+
+/* FLIGHT DIRECTOR SINGLE */
+
+
+#flightDirectorSingleContainer{
+    height: 240px;
+    width: 320px;
+    margin: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 36px;
+    bottom: 0;
+}
+
+#flightDirectorSingleContainer:not(.flightDirectorSingleContainerVisible){
+    display: none;
+}
+
+.flightDirectorSingle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+}
+  
+
+.flightDirectorSingle > img{
+    width: 80px; 
+}
+.flightDirectorSingle > img:last-child{
+    transform: scaleX(-1);
+}
+
+
+
+
+
+/* BANK ARC */
+#bankArcWrapper{
+    width: 136px;
+    height: 40px;
+    /* background-color: red; */
+    margin: auto;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#bankArcWrapper::after{
+    flex-shrink: 0;
+    content: '';
+    display: block;
+    width: 152px;
+    height: 152px;
+    border: 2px solid #fff;
+    border-radius: 50%; 
+}
+
+
+
+
+
+/* BANK ARC MARKS */
+#bankArcMarkList{
+    position: absolute;
+    left: 236px;
+    top: 125px;
+}
+#bankArcMarkList > div{
+    height: 2px;
+    transform: rotate(-90deg);
+    transform-origin: -76px center;
+    background-color: #fff;
+    position: absolute;
+}
+
+.bankTickLong{
+    width: 10px;
+}
+
+.bankTickShort{
+    width: 8px; 
+}
+
+
+
+
+
+/* BANK TRIANGLE */
+#bankIndicatorRotation{
+    transform: rotate(0deg);
+    transform-origin: center 82px;
+    width: fit-content;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 45px;
+}
+
+#bankIndicator,
+#bankIndicatorStatic{
+    border: 5px solid transparent;
+    border-bottom-color: #fff;
+    transform: scaleY(2); 
+}
+
+
+#bankIndicatorStatic{
+    width: fit-content;
+    /* background-color: red; */
+    border-color: transparent;
+    border-top-color: #fff;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 44px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Autopilot Annunciations */
+#autopilotAnnunciation{
+    width: fit-content;
+    font-weight: 600;
+    padding: 2px 6px;
+    border: 1px solid #000;
+    margin: auto;
+    position: absolute;
+    bottom: 60px; 
+    right: 0;
+    left: 0;
+}
+
+.autopilotAnnunciationRed{
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.autopilotAnnunciationYellow{
+    color: #000;
+    background-color: #ffc107;
+}
+
+.autopilotAnnunciationWhite{
+    color: #000;
+    background-color: #fff;
+}
+
+.autopilotAnnunciationBlack{
+    color: #dc3545;
+    background-color: #000;
+}
+
+.autopilotAnnunciationBlackError{
+    color: #ffc107;
+    background-color: #000;
+}
+
+
+
+
+/* PTRIM */
+
+#autopilotAnnunciationPitchTrimFail{
+    width: fit-content;
+    padding: 1px 3px;
+    font-weight: 600;
+    border: 1px solid #000;
+    margin: auto;
+    position: absolute;
+    bottom: 170px; 
+    right: 112px;
+    left: 0;
+}
+
+/* MIN & MAX SPEED */
+#autopilotAnnunciationSpeedMinMax{
+    width: 66px;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    top: 14px;
+}
+
+
+
+#autopilotAnnunciation:not(.autopilotAnnunciationVisible),
+#autopilotAnnunciationPitchTrimFail:not(.autopilotAnnunciationVisible),
+#autopilotAnnunciationSpeedMinMax:not(.autopilotAnnunciationVisible){
+    display: none;
+}
+

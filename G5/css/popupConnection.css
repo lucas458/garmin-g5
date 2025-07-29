@@ -1,0 +1,51 @@
+
+/****** POPUP CONNECTION ******/
+#popupConnection{
+    width: 240px; 
+    height: fit-content;
+    background: linear-gradient(#636363, #000 20px);
+    border: 2px solid #ababa9;
+    border-radius: 4px;
+    padding: 4px;
+    margin: auto; 
+    font-weight: 600;
+    z-index: 10;
+    transition: 100ms;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#popupConnection:not(.popupConnectionOpen){
+    transform: translateY(150%);
+}
+
+
+#popupConnectionHeader{
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+
+
+.dockSelectorButtonList{
+    display: flex;
+    gap: 3px;
+    align-items: flex-end;
+}
+
+.dockSelectorButtonList .dockSelectorButton{
+    padding: 0 3px;
+    width: 40px;
+}
+ 
+
+#popupConnection .dockSelectorButton.dockSelectorSelected{
+    border-color: #00f !important;
+}
+
+#dockSelectorContainer .dockSelectorButton.dockSelectorSelected,
+.dockSelectorHovered{
+    border-color: #0df;
+}

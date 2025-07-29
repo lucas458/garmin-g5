@@ -1,0 +1,577 @@
+
+/****** INTERFACE TYPE: B ******/
+
+
+/* COMPASS */
+#compassContainer{
+
+    width: 246px;
+    aspect-ratio: 1/1;
+    /* background-color: #0000ff80; */
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+#compassContainer > div{
+    margin: auto;
+    position: absolute;
+    top: 256px;
+    bottom: 0;
+}
+
+#compassContainer .bigTickLong{
+    background-color: #ababa9;
+}
+
+
+#compassFixed{
+    width: 100%;
+    height: 100%;
+}
+
+#compassFixed .bigTickLong{
+    transform: rotate(0deg);
+    transform-origin: 123px center;
+    position: absolute;
+}
+
+
+
+
+#compassFixedCircle{
+    width: 123px; 
+    height: fit-content;
+    aspect-ratio: 1/1; 
+    border: 1px solid #ababa9;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+    position: absolute;
+    left: 62px;
+    top: 22px !important;
+}
+
+
+#airplaneSymbol{
+    width: 36px;
+    transform: rotate(-90deg) translateY(-0.5px);
+    /* position: absolute; */
+    /* left: ; */
+    position: relative;
+    z-index: 2;
+}   
+
+
+
+
+
+
+
+#bearingTypeContainer{
+    
+    
+    width: 320px;
+    height: 34px;
+    /* background-color: red; */
+    left: -37px !important;
+    /* border: 1px solid #fff; */
+    top: 137px !important;
+    
+    margin: initial;
+    overflow: hidden;
+    z-index: 0;
+    position: absolute; 
+    
+}
+
+
+#bearingTypeContent{
+    width: 320px;
+    height: 34px;
+    border: 1px solid #ababa9;
+    color: #6dcad8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bearingTypeLeft,
+#bearingTypeRight{
+    width: 48px;
+    height: 32px;
+    padding: 2px 2px 0 2px;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#bearingTypeRight{
+    align-items: flex-end;
+}
+
+
+
+#bearingTypeLeft:not(.bearingTypeVisible)::after,
+#bearingTypeRight:not(.bearingTypeVisible)::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#bearingTypeRight:not(.bearingTypeVisible)::after{ 
+    left: initial;
+    right: 0;
+}
+
+
+#bearingTypeLeft > div:first-child,
+#bearingTypeRight > div:first-child{
+    width: 32px;
+    height: 24px;
+}
+
+
+#bearingTypeCircle{ 
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 1px solid #ababa9;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform-origin: 122.5px 135px; */
+    z-index: 1;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -112px !important;
+    bottom: 0;
+}
+
+
+
+
+
+
+#compassContainer .genericValueContainer{
+    top: initial;
+    bottom: 15px;
+    left: -37px;
+}
+
+#compassContainer .genericValueContainerMini{
+    top: initial;
+    bottom: 0px;
+    left: -37px;
+}
+
+
+
+
+
+
+
+
+
+
+#compassRotativeContainer{
+    width: 100%;
+    height: 100%;
+    top: 0 !important;
+}
+
+
+#compassRotative{
+    width: 100%;
+    height: 100%;
+    /* background-color: #ff000080; */
+    transform-origin: top center;
+    position: absolute;
+    margin: auto;
+    top: 257px;
+    bottom: 0;
+
+}
+
+#compassRotative > div{ 
+    position: absolute;
+    transform-origin: 103.5px center;
+    left: 19px;
+}
+
+#compassRotative .miniTickShort{
+    width: 7px;
+}
+
+#compassRotative .miniTickLong{
+    width: 12px;
+    height: 1px;
+}
+
+#compassRotative .bigTickLong{ 
+    width: 15px;
+    transform: translateY(-0.5px);
+    display: flex;
+    align-items: center;
+}
+
+#compassRotative .fontMedium{ 
+    position: relative;
+    left: 100%;
+    padding-left: 4px;
+    padding-right: 2px;
+    color: #ababa9;
+}
+
+
+
+
+
+
+
+
+
+
+/* CURRENT GROUND TRACK */
+
+#rotativeGroundTrackContainer{
+    /* background-color: #ff000080; */
+    margin: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    transform-origin: center center; 
+    z-index: 1;
+
+    transform: rotate(0deg);
+
+    position: absolute;
+    left: -1px;
+    right: 0;
+    top: 22px;
+    bottom: 0;
+}
+
+
+#rotativeGroundTrack{ 
+    display: flex; 
+    align-items: center;
+    position: relative;
+    left: 50%;
+}
+
+
+
+#rotativeGroundTrackLine{
+    width: 103px;
+    /* border: 1px dashed #0f0; */
+
+    display: flex;
+    justify-content: space-evenly;
+
+    /* position: relative; */
+    /* left: 50%; */
+}
+
+#rotativeGroundTrackLine > div{
+    width: 7px;
+    height: 2px;
+    background-color: #9e9e9e;
+}
+
+#rotativeGroundTrackTriangle{ 
+    border: 4px solid transparent;
+    border-right-color: #bb509d;
+    right: -6px;
+    position: absolute;
+}
+
+
+
+
+/* BEARING POINTER 1/2 -- BLUE */
+
+.rotativeArrowContainer{
+    /* background-color: #ff00ff80; */
+    /* width: 16px; */
+    /* height: 16px; */
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotate(0deg);
+    /* transform-origin: center 135px; */
+
+    transform-origin: 122.5px 135px;
+
+    z-index: 1;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1px;
+    bottom: 0;
+
+}
+
+.rotativeArrow{
+    /* width: fit-content; */
+    height: 171px;
+    /* background-color: blue; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 11px;
+    position: relative;
+    transform: translateX(-0.5px);
+}
+
+
+.rotativeArrowHeader{
+    position: relative;
+    width: 2px;
+    height: 24px;
+    background-color: #6dcad8;
+}
+
+
+.rotativeArrowHeader::before,
+.rotativeArrowHeader::after{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 16px;
+    transform: rotate(40deg);
+    background-color: #6dcad8;
+    position: absolute;
+    left: -5px;
+    top: 3px;
+}
+
+.rotativeArrowHeader::after{
+    transform: rotate(-40deg);
+    left: 5px;
+}
+
+
+
+
+
+
+.rotativeArrowTail{
+    width: 2px;
+    height: 24px;
+    background-color: #6dcad8;
+    position: relative;
+}
+
+
+
+
+#rotativeBearing2{
+    transform: rotate(90deg);
+}
+
+#rotativeBearing2 .rotativeArrowHeader{
+    height: 5px;
+}
+
+.rotativeArrowHeader > div{
+    width: 2px;
+    height: 16px;
+    background-color: #6dcad8;
+    position: absolute;
+    top: 8px;
+    left: -3px;
+}
+
+.rotativeArrowHeader > div:last-child{
+    left: 3px;
+}
+
+
+.rotativeArrowTail > div:nth-child(odd){
+    width: 2px;
+    height: 12px;
+    background-color: #6dcad8;
+    position: absolute;
+    top: -12px;
+    left: -3px;
+}
+
+.rotativeArrowTail > div:last-child{
+    left: 3px;
+}
+
+
+#rotativeBearing2 .rotativeArrowTail{
+    height: 12px;
+}
+
+
+
+.rotativeArrowTail > div:nth-child(even){
+    width: 4px;
+    height: 2px;
+    background-color: #6dcad8;
+    position: relative;
+    left: -1px;
+    top: -2px;
+}
+
+
+
+.rotativeBearing:not(.rotativeBearingVisible){
+    display: none;
+}
+
+
+
+
+
+
+/*  COURSE DEVIATION INDICATOR */
+
+#rotativeCourseDeviationContainer{
+    left: 1px;
+}
+
+#rotativeCourseDeviationContainer .rotativeArrow{
+    height: 195px;
+    transform: translateX(-1px);
+    color: #46b34c;
+}
+
+#rotativeCourseDeviationContainer .rotativeArrowHeader{
+    width: 3px;
+    height: 45px; 
+    background-color: #46b34c;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+#rotativeCourseDeviationContainer .rotativeArrowHeader > span{
+    transform: translate(0.5px, -15px);
+    font-size: 32px;
+}
+
+
+
+#rotativeCourseDeviationContainer .rotativeArrowHeader::before,
+#rotativeCourseDeviationContainer .rotativeArrowHeader::after{
+    display: none;
+}
+
+.rotativeArrowBody{
+    
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.rotativeArrowBodyLine{
+    width: 3px;
+    height: 100px;
+    background-color: #46b34c;
+    transform: translateX(0px);
+    
+    transition: 1500ms;
+}
+
+.rotativeArrowBodyContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 17px;
+    position: absolute;
+    /* top: 0px; */
+    transform: translateX(-52.5px);
+}
+
+
+
+
+
+.rotativeArrowBodyContent > div{
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    /* aspect-ratio: 1/1; */
+    border: 1px solid #ababa9;
+    border-radius: 50%;
+}
+
+.rotativeArrowBodyContent > div:nth-child(3){
+    visibility: hidden;
+}
+
+
+
+#rotativeCourseDeviationContainer .rotativeArrowTail{
+    width: 3px;
+    height: 45px;
+    background-color: #46b34c;
+}
+
+
+.rotativeCourseDeviationContainerMagenta .rotativeArrowHeader,
+.rotativeCourseDeviationContainerMagenta .rotativeArrowTail,
+.rotativeCourseDeviationContainerMagenta .rotativeArrowBodyLine{
+    background-color: #bb509d !important;
+    color: #bb509d;
+}
+
+
+
+/* ROTATIVE HEADING BUG */
+
+#rotativeHeadingBugContainer{
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#rotativeHeadingBug{
+    height: 207px;
+    transform: rotate(0deg);
+    transform-origin: 4.5px center;
+    position: relative;
+    top: 10px;
+}
+#rotativeHeadingBug svg{
+    transform: rotate(-90deg) scale(0.8) translateY(-1px);
+    top: -19px;
+    position: relative;
+}

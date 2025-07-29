@@ -1,0 +1,28 @@
+/*** CONFIGURATION MODE -- MAIN ***/
+
+#configurationModeContainer:not(.configurationModeContainerOpen),
+#configurationModeContainer:not(.configurationModeContainerOpen) ~ #configurationModeScreen
+{
+    display: none;
+}
+
+
+/*** CONFIGURATION MODE -- SCREEN ***/
+#configurationModeScreen{
+    transition: 100ms;
+    left: 0%;
+}
+
+#configurationModeScreen:not(.configurationModeScreenOpen){
+    left: 100% !important;
+}
+
+
+#popupValueContainer.popupValueOpen ~ .configurationModeScreenOpen::after,
+#popupConfirmContainer.popupConfirmOpen ~ .configurationModeScreenOpen::after{
+    content: ''; 
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    position: absolute; 
+}

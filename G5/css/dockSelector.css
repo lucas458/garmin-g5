@@ -1,0 +1,99 @@
+
+/*** DOCK SELECTOR ***/
+#dockSelectorContainer{
+    width: 100%;
+    /* min-height: 96px; */
+    background: linear-gradient(#636363, #000 20px);
+    z-index: 10;
+    bottom: 0;
+}
+
+#dockSelectorContainer:not(.dockSelectorOpen){
+    display: none;
+}
+
+#dockSelectorHeader{
+    text-align: center;
+    height: 16px;
+    flex-shrink: 0;
+    padding-top: 4px;
+}
+
+
+#dockSelectorWrapperList{
+    padding: 4px;
+}
+
+
+.dockSelectorWrapper{
+    border: 1px solid #9e9e9e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    margin-bottom: 1px;
+    gap: 1px;
+ 
+}
+
+
+
+
+
+
+.dockSelectorWrapper:last-child{
+    margin: 0;
+}
+
+.dockSelectorWrapperNested > div{
+    flex: 1;
+}
+
+
+
+
+
+
+
+.dockSelectorButton{
+    flex-shrink: 0;
+    height: 32px; 
+    background: linear-gradient(#636363, #454545, #4b4b4b, #000);
+    border: 2px solid #ababa9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.dockSelectorIcon{
+    width: 32px;
+    height: 32px;
+    background-color: red;
+
+    flex-shrink: 0;  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.dockSelectorWrapperNormal{
+    height: 42px;
+    background: none;
+    padding: 0 3px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.dockSelectorWrapperNormal.dockSelectorSelected,
+.dockSelectorWrapperNested.dockSelectorSelected .dockSelectorButton{
+    /* border-color: #6dcad8; */
+    border-color: #0df;
+}

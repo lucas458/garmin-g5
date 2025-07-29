@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #181818;
+    color: #fff;
+    user-select: none;
+    overscroll-behavior: contain;
+}
+
+.bodyDark{
+    background-color: #000 !important;
+}
+
+
+
+@font-face {
+    font-family: "DejaVuSans";
+    src: url("../DejaVuSans.ttf");
+    src: url("../fonts/DejaVuSans.ttf");
+    /* src: url("../fonts/DejaVuSans-Bold.ttf"); */
+}
+
+.fontBig, .fontMedium, .fontSmall2, .fontSmall{
+    font-family: "DejaVuSans";
+}
+
+.fontBig{
+    font-size: 20px;
+}
+.fontMedium{
+    font-size: 16px;    
+}
+.fontSmall2{ 
+    font-size: 12px;    
+}
+.fontSmall{ 
+    font-size: 10px;
+}
+
+
+
+
+.unitContainer{
+    font-size: 8px;
+    line-height: 8px;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 7px;
+}
+
+
+
+#main_screen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+
+
+#frame{
+    width: 376px;
+    height: 397px;
+    /* background-color: red; */
+    background-image: url("../images/GarminG5_AI.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: 376px auto;
+    /* image-rendering: pixelated; */
+}
+
+
+.frameHidden{
+    background: none !important;
+}
+
+#lcd{
+    width: 320px;
+    height: 240px;
+    /* background-color: #00ff0080; */
+    position: relative;
+    left: 29px;
+    top: 60px;
+
+
+    overflow: hidden;
+}
+
+#interface_A, #interface_B{
+    width: 320px;
+    height: 240px;
+}
+
+
+#interface_A:not(.interface_visible),
+#interface_B:not(.interface_visible){
+    /* opacity: 0; */
+    display: none;
+}
+
+#interface_B{
+    background-color: #00000080;
+    /* background-color: #000; */
+} 
+
+
+
+
+
+
+.opacityContainer{
+    position: absolute;
+    background-color: #00000080;
+}
+
+
+#lcd > div,
+#interface_A > div,
+#interface_B > div{
+    position: absolute;
+}
+
+
+
+
+
+/****** LCD STATE ******/
+#lcdStateScreen{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: relative;
+    z-index: 100;
+    pointer-events: none;
+    transition: 500ms;
+    opacity: 1;
+}
+
+
+#lcdStateScreen:not(.lcdStateDisabled){
+    opacity: 0;
+}
+

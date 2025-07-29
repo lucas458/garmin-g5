@@ -1,0 +1,42 @@
+
+/*** POPUP SELECTOR ***/
+#popupSelectorContainer{
+    width: fit-content;
+    min-width: 152px;
+    /* height: auto; */
+    background: linear-gradient(#636363, #000 20px);
+    border: 2px solid #ababa9;
+    border-radius: 4px;
+    padding: 4px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 107px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+#popupSelectorContainer:not(.popupSelectorOpen){
+    display: none;
+}
+
+#popupSelectorHeader{
+    text-align: center;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+
+#popupSelectorOptionList{
+    padding: 0 4px;
+}
+
+.popupSelectorOption{
+    border: 1px solid #9e9e9e;
+    padding: 2px;
+}
+
+.popupSelectorOptionSelected{
+    border: 2px solid #6dcad8; 
+}

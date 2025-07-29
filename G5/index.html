@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    
+    <link rel="stylesheet" href="css/configurationMode.css">
+    <link rel="stylesheet" href="css/dockSelector.css">
+    <link rel="stylesheet" href="css/interfaceHsi.css">
+    <link rel="stylesheet" href="css/interfacePfd.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/popupConfirm.css">
+    <link rel="stylesheet" href="css/popupConnection.css">
+    <link rel="stylesheet" href="css/popupSelector.css">
+    <link rel="stylesheet" href="css/popupValue.css">
+    <link rel="stylesheet" href="css/splashScreen.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uiGeneric.css">
+
+    <title>Garmin G5</title>
+
+</head>
+
+
+
+<body>
+    
+    <div id="main_screen">
+
+        
+        <div id="frame">
+
+            <div id="lcd">
+
+                <!-- PFD -- interface_visible -->
+                <div id="interface_A" class="interface_visible">
+
+                    <!-- UPPER CONTENT -->
+                    <div id="topContent">
+                        <div class="topContentDivider"></div>
+                        <div class="topContentDivider"></div>
+    
+                        <div id="topContentList">
+                            <div class="topContentTextContainer">
+                                <div class="topContentText fontSmall2">GPS</div>
+                                <div class="topContentText fontSmall2">HDG</div>
+                            </div>
+                            <div class="topContentTextContainer">
+                                <div class="topContentText fontSmall2">AP</div> <!-- AUTOPILOT -->
+                                <div class="topContentText fontSmall2">YD</div> <!-- YAW DAMPER -->
+                            </div>
+                            <div class="topContentTextContainer">
+                                <div class="topContentText fontSmall2">ALT</div>
+                                <div class="topContentText fontSmall2">30000</div>
+                                <div class="topContentText fontSmall2">GP</div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+    
+    
+    
+    
+                    <!-- CENTER -->
+                    <div id="centerContainer">
+    
+                        <!-- SKY & GROUND -->
+                        <div id="skyGroundRotation">
+                            <div id="skyGroundMoving">
+                                <div id="sky"></div>
+                                <div id="hLine"></div>
+                                <div id="ground"></div>
+                            </div>
+                        </div>
+    
+                        <!-- LADDER -->
+                        <div id="ladderContainer">
+    
+                            <div id="ladderRotation">
+                                <div id="ladderMoving"> 
+                                    <!-- <div class="ladderLineLong" value="10"></div>
+                                    <div class="ladderLineSmall"></div>
+                                    <div class="ladderLineMedium"></div>
+                                    <div class="ladderLineSmall"></div>
+                                    <div id="ladderLineHorizon"></div>
+                                    <div class="ladderLineSmall"></div>
+                                    <div class="ladderLineMedium"></div>
+                                    <div class="ladderLineSmall"></div>
+                                    <div class="ladderLineLong" value="10"></div> -->
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+    
+    
+    
+                        <!-- LOCALIZER -->
+                        <div id="localizerContainer" class="glideLocalizerContainer">
+                            <div class="glideLocalizerTickList">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+    
+                            <div class="glideLocalizerThumbContainer">
+                                <div class="glideLocalizerThumbTriangle"></div>
+                            </div>
+    
+                        </div>
+    
+    
+    
+                        <!-- GLIDESLOPE -->
+                        <div id="glideslopeContainer" class="glideLocalizerContainer">
+                            <div class="glideLocalizerTickList">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+    
+                            <div class="glideLocalizerThumbContainer">
+                                <div class="glideLocalizerThumbDiamond glideLocalizerThumbDiamondGreen"></div>
+                            </div>
+    
+                        </div>
+    
+    
+    
+                        <!-- SLIP/SKID INDICATOR -->
+                        <div id="slipIndicatorContainer">
+                            <div class="slipIndicatorBar"></div>
+                            <div id="slipIndicatorBall"></div>
+                            <div class="slipIndicatorBar"></div>
+                        </div>
+    
+    
+    
+                        <!-- TURN RATE INDICATOR -->
+                        <div id="turnRateIndicatorContainer">
+                            <div id="turnRateIndicatorTop"></div>
+    
+                            <div id="turnRateIndicatorBottom">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+
+                            <div id="turnRateIndicatorTrendContainer">
+                                <div id="turnRateIndicatorTrend"></div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- FLIGHT DIRECTOR - flightDirectorVisible -->
+                        <div id="flightDirectorContainer" class=" ">
+                            <div id="flightDirectorHorizontal"></div>
+                            <div id="flightDirectorVertical"></div>
+                        </div>
+                        
+
+                        <!-- FLIGHT DIRECTOR -- FIXED - flightDirectorVisible -->
+                        <div id="flightDirectorFixed" class=" ">
+                            <img src="svg/flightDirectorFixed.svg">
+                            <div id="flightDirectorFixexCircle"></div>
+                            <img src="svg/flightDirectorFixed.svg"> 
+                        </div>
+
+
+
+
+                        <!-- FLIGHT DIRECTOR SINGLE - flightDirectorSingleContainerVisible -->
+                        <div id="flightDirectorSingleContainer" class=" ">
+                            <div class="flightDirectorSingle" id="flightDirectorSingleMoveable">
+                                <img src="svg/clueMoveableBase.svg">
+                                <img src="svg/clueMoveableBase.svg">
+                            </div>
+
+                            <div class="flightDirectorSingle">
+                                <img src="svg/clueFixed.svg">
+                                <img src="svg/clueFixed.svg">
+                            </div>
+                        </div>
+
+
+
+                        <!-- BANK ARC -->
+                        <div id="bankArcWrapper"></div>
+
+
+
+                        <!-- BANK ARC MARKS -->
+                        <div id="bankArcMarkList">
+                            <div class="bankTickLong" style="transform: rotate(-100deg);"></div>
+                            <div class="bankTickShort" style="transform: rotate(-110deg);"></div>
+                            <div class="bankTickLong" style="transform: rotate(-120deg);"></div>
+                            <div class="bankTickShort" style="transform: rotate(-135deg);"></div>
+                            <div class="bankTickShort" style="transform: rotate(-150deg) translateY(-1px);"></div>
+                            <div class="bankTickShort" style="transform: rotate(-80deg);"></div>
+                            <div class="bankTickShort" style="transform: rotate(-70deg);"></div>
+                            <div class="bankTickLong" style="transform: rotate(-60deg);"></div>
+                            <div class="bankTickShort" style="transform: rotate(-45deg);"></div>
+                            <div class="bankTickLong" style="transform: rotate(-30deg) translateY(1px);"></div>
+                        </div>
+
+
+                        <!-- BANK TRIANGLE STATIC -->
+                        <div id="bankIndicatorStatic"></div>
+                        
+
+                        <!-- BANK TRIANGLE -->
+                        <div id="bankIndicatorRotation">
+                            <div id="bankIndicator"></div>
+                        </div>
+
+
+
+
+                        <!-- Autopilot Annunciations - autopilotAnnunciationVisible -->
+                        <div id="autopilotAnnunciation" class="fontSmall2 autopilotAnnunciationYellow">TRIM DOWN</div>
+
+                        <!-- PTRIM - autopilotAnnunciationVisible -->
+                        <div id="autopilotAnnunciationPitchTrimFail" class="fontSmall2 autopilotAnnunciationRed">PTRIM</div>
+
+                        <!-- MINSPD/MAXSPD - autopilotAnnunciationVisible -->
+                        <div id="autopilotAnnunciationSpeedMinMax" class="fontSmall2 autopilotAnnunciationYellow">MINSPD</div>
+                         
+                    </div>
+    
+    
+    
+    
+    
+    
+                    <!-- AT-TOP -->
+                    <div id="pseudoTopContainer">
+                        <div id="headingCourse"></div>
+                    </div>
+    
+                    <!-- TOP -->
+                    <div class="opacityContainer" id="topContainer">
+    
+    
+    
+                        <div id="headingStrip">
+                            <!-- <div class="miniTickLongVertical fontSmall"> <div>100</div> </div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickLongVertical fontSmall"> <div>100</div> </div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickLongVertical fontSmall"> <div>100</div> </div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickLongVertical fontSmall"> <div>100</div> </div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickLongVertical fontSmall"> <div>100</div> </div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div>
+                            <div class="miniTickShortVertical"></div> -->
+                        </div>
+    
+    
+    
+    
+                        <div id="headingBug">
+                            <svg width="11" height="28" class="selectedBug">
+                                <path d="M 0 0 L 11 0 L 11 7 L 4 14 L 11 21 L 11 28 L 0 28 L 0 0" style="fill:#6dcad8;stroke:#000;stroke-width:1"></path>
+                            </svg>
+                        </div>
+
+
+                        <div id="headingGroundTrackBug"></div>
+                        <div id="headingGroundTrackTriangle"></div>
+                        
+     
+                        <div class="headingReadout">
+                            <div class="headingReadoutValue fontSmall2"><span>000°</span> <div>M</div> </div>
+                            <div class="headingReadoutTRK fontSmall">TRK</div>
+                            <div class="headingReadoutTriangle"></div>
+                        </div>
+    
+    
+    
+    
+                    </div>
+    
+    
+    
+    
+                    
+
+                    
+                    <!-- AT-LEFT -- Vspeed References Normal -->
+                    <div id="verticalSpeedReferenceListNormal">
+                        <div id="verticalSpeedReferenceListNormalMoving">
+                            <!-- <div class="verticalSpeedReference"> 
+                                <div class="verticalSpeedReferenceLetter fontSmall">T</div>
+                            </div>
+                            <div class="verticalSpeedReference"> 
+                                <div class="verticalSpeedReferenceLetter fontSmall">H</div>
+                            </div> -->
+                        </div>
+                    </div>
+    
+
+
+
+
+
+                    <!-- AT-LEFT -->
+                    <div id="pseudoLeftContainer" class="showGroundSpeedOnly showGroundSpeedAndTemperature">
+                        
+                        <div id="pseudoLeftContainerMoving">
+
+                            <div id="verticalSpeedReferenceListStaic">
+                                <!-- <div class="verticalSpeedReference">
+                                    <div class="verticalSpeedReferenceValue fontSmall2">129</div>
+                                    <div class="verticalSpeedReferenceLetter fontSmall">A</div>
+                                </div>
+                                <div class="verticalSpeedReference">
+                                    <div class="verticalSpeedReferenceValue fontSmall2">85</div>
+                                    <div class="verticalSpeedReferenceLetter fontSmall">Y</div>
+                                </div>
+                                -->
+                            </div>
+    
+                            <div id="speedUnit" class="fontSmall">
+                                <div>K</div>
+                                <div>T</div>
+                            </div>
+
+                            <div class="genericValueContainer" id="groundSpeedContainer">
+                                <div class="fontSmall">GS</div>
+                                <div class="fontMedium">000</div>
+                                <div> <div>k</div> <div>t</div> </div>
+                            </div>
+    
+                            <div id="outsideAirTemperatureContainer" class="fontSmall genericValueContainerMini">
+                                <div>OAT</div>
+                                <div>60°F</div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    
+    
+    
+    
+                    <!-- LEFT -->
+                    <div class="opacityContainer" id="leftContainer">
+
+                        <div id="speedColorList">
+                            <div style="background-color: lime; height: 720px;"></div>
+                            <div style="background-color: yellow; height: 320px;"></div>
+                            <div style="background-color: red; height: 160px;"></div>
+                        </div>
+    
+                        <div id="speedStrip">
+                            <!-- <div class="bigTickLong">
+                                <div class="fontMedium">000</div> 
+                            </div>
+                            <div class="bigTickShort"></div>  -->
+                        </div> 
+
+
+                        <div id="speedDesired">
+                            <div class="fontMedium" id="speedDesiredValue">300</div>
+
+                            <div class="unitContainer">
+                                <div>k</div>
+                                <div>t</div>
+                            </div>
+                            
+                            <div id="speedDesiredSymbol"></div>
+                        </div>
+
+
+
+                        <div id="speedBug">
+                            <svg width="11" height="28" class="selectedBug">
+                                <path d="M 0 0 L 11 0 L 11 7 L 4 14 L 11 21 L 11 28 L 0 28 L 0 0" style="fill:#6dcad8;stroke:#000;stroke-width:1"/>
+                            </svg>
+                        </div>
+
+    
+    
+                        <div id="speedReadout">
+    
+                            <div id="speedReadoutLeft">
+                                <div class="numberContainer fontBig"> 
+                                    <div>0</div>
+                                    <div>9</div>
+                                    <div>8</div>
+                                    <div>7</div>
+                                    <div>6</div>
+                                    <div>5</div>
+                                    <div>4</div>
+                                    <div>3</div>
+                                    <div>2</div>
+                                    <div>1</div>
+                                    <div>0</div>
+                                    <div>9</div>
+                                </div> 
+                                <div class="numberContainer fontBig"> 
+                                    <div>0</div>
+                                    <div>9</div>
+                                    <div>8</div>
+                                    <div>7</div>
+                                    <div>6</div>
+                                    <div>5</div>
+                                    <div>4</div>
+                                    <div>3</div>
+                                    <div>2</div>
+                                    <div>1</div>
+                                    <div>0</div>
+                                    <div>9</div>
+                                </div> 
+    
+    
+                            </div>
+    
+    
+                            <div id="speedReadoutRight">
+                                <div class="numberContainer fontBig"> 
+                                    <div>1</div>
+                                    <div>0</div>
+                                    <div>9</div>
+                                    <div>8</div>
+                                    <div>7</div>
+                                    <div>6</div>
+                                    <div>5</div>
+                                    <div>4</div>
+                                    <div>3</div>
+                                    <div>2</div>
+                                    <div>1</div>
+                                    <div>0</div>
+                                    <div>9</div>
+                                </div> 
+                            </div>
+    
+                            <div id="speedReadoutVline"></div>
+                            <div id="speedReadoutTriangle"></div>
+    
+                        </div>
+    
+    
+    
+    
+                    </div>
+    
+    
+    
+                    
+                    <!-- RIGHT -->
+                    <div class="opacityContainer" id="rightContainer">
+    
+                        <div id="altitudeStrip">
+                            <!-- <div class="bigTickLong">
+                                <div class="fontMedium">00</div>
+                                <div class="fontSmall2">000</div>
+                            </div>
+                            <div class="bigTickShort"></div> -->
+                        </div>
+
+
+                        
+    
+    
+    
+                        <div id="altitudeBug">
+                            <svg width="11" height="28" class="selectedBug">
+                                <path d="M 0 0 L 11 0 L 11 7 L 4 14 L 11 21 L 11 28 L 0 28 L 0 0" style="fill:#6dcad8;stroke:#000;stroke-width:1"/>
+                            </svg>
+                        </div>
+    
+    
+    
+                        <div id="altitudeDesired">
+                            <div id="altitudeDesiredSymbol"></div>
+                            <div class="fontMedium" id="altitudeDesiredValue">5000</div>
+
+                            <div class="unitContainer">
+                                <div>f</div>
+                                <div>t</div>
+                            </div>
+                        </div>
+
+
+                        <!-- verticalSpeedDesiredVisible -->
+                        <div id="verticalSpeedDesired" class="">
+                            <div class="fontMedium" id="verticalSpeedDesiredValue">+700</div>
+                            <div id="verticalSpeedDesiredSymbol"></div>
+                        </div>
+    
+    
+                        
+    
+    
+                        <div id="veriticalSpeed">
+                            <div id="verticalSpeedIndicatorBox"></div>
+                            <div id="verticalSpeedIndicator"></div>
+    
+                            <div id="verticalSpeedStrip">
+                                <!-- <div class="miniTickLong"></div>
+                                <div class="miniTickShort"></div> -->
+                            </div>
+                            
+                        </div>
+
+                        <div class="fontMedium" id="altitudeAdjustContainer">
+                            <div id="altitudeAdjust">00.00</div>
+
+                            <div>
+                                <div>i</div>
+                                <div>n</div>
+                            </div>
+
+                        </div>
+    
+    
+                        <div id="altitudeReadout">
+                            <!-- class=altitudeReadoutNegative -->
+                            <div id="altitudeReadoutLeft" class="">
+                                <div class="numberContainer fontBig"> 
+                                    <div>0</div>
+                                    <div>9</div>
+                                    <div>8</div>
+                                    <div>7</div>
+                                    <div>6</div>
+                                    <div>5</div>
+                                    <div>4</div>
+                                    <div>3</div>
+                                    <div>2</div>
+                                    <div>1</div>
+                                    <!-- <div>0</div> -->
+                                    <!-- <div>9</div> -->
+                                </div> 
+
+                                <div class="numberContainer fontBig"> 
+                                    <div>0</div>
+                                    <div>9</div>
+                                    <div>8</div>
+                                    <div>7</div>
+                                    <div>6</div>
+                                    <div>5</div>
+                                    <div>4</div>
+                                    <div>3</div>
+                                    <div>2</div>
+                                    <div>1</div>
+                                    <div>0</div>
+                                    <div>1</div>
+                                    <div>2</div>
+                                </div>
+
+                                <div class="numberContainer fontMedium"> 
+                                    <div>0</div>
+                                    <div>9</div>
+                                    <div>8</div>
+                                    <div>7</div>
+                                    <div>6</div>
+                                    <div>5</div>
+                                    <div>4</div>
+                                    <div>3</div>
+                                    <div>2</div>
+                                    <div>1</div>
+
+                                    <div>0</div>
+
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                    <div>4</div>
+                                    <div>6</div>
+                                    <div>7</div>
+                                    <div>8</div>
+                                    <div>9</div>
+                                    <div>0</div>
+                                </div> 
+                            </div>
+                            
+
+                            <div id="altitudeReadoutRight">
+                                <div class="numberContainer fontMedium">
+                                    <div>20</div> 
+                                    <div>00</div> 
+                                    <div>80</div> 
+                                    <div>60</div> 
+                                    <div>40</div> 
+                                    <div>20</div> 
+                                    <div>00</div> 
+                                    <div>80</div> 
+                                    <div>60</div> 
+                                    <div>40</div> 
+                                    <div>20</div> 
+                                    <div>00</div>
+                                    <div>20</div> 
+                                    <div>40</div> 
+                                    <div>60</div> 
+                                    <div>80</div> 
+                                    <div>00</div> 
+                                    <div>20</div> 
+                                    <div>40</div> 
+                                    <div>60</div> 
+                                    <div>80</div> 
+                                    <div>00</div> 
+                                    <div>20</div> 
+                                </div>
+                            </div>
+    
+                            <div id="altitudeReadoutVline"></div>
+                            <div id="altitudeReadoutTriangle"></div>
+                        </div>
+
+    
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <!-- HSI -- interface_visible -->
+                <div id="interface_B">
+                    
+                    <div class="genericValueContainer" id="currentDesiredTrackContainer">
+                        <div class="fontSmall">DTK</div>
+                        <div class="fontMedium">267°</div> 
+                        <div></div>
+                    </div>
+
+                    <div class="fontSmall genericValueContainerMini" id="outsideAirTemperatureContainerHsi">
+                        <div>OAT</div>
+                        <div>60°F</div>
+                    </div>
+
+                    <div class="genericValueContainerBig" id="bearingDistance">
+                        <div class="fontSmall">DIST NM</div>
+                        <div class="fontMedium">11.4</div>
+                    </div>
+                    
+                    <div class="fontSmall genericValueContainerMini" id="batteryInformation">
+                        <div>100%</div>
+                        <div>xx</div>
+                    </div>
+
+                    <div class="genericValueContainerBig fontSmall" id="windInformation">
+                        <div id="windArrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#fff"><path d="m96-192 384-576 384 576H96Z"/></svg>
+                        </div>
+
+                        <div id="windContent">
+                            <div>11 KT</div>
+                            <div>150</div>
+                        </div>
+                    </div>
+
+
+                    <div id="headingDesired">
+                        <div id="headingDesiredSymbol"></div>
+                        <div id="headingDesiredValue" class="fontSmall2">000°</div>
+                    </div>
+
+
+                    <div class="headingReadout">
+                        <div class="headingReadoutValue fontSmall2"><span>000°</span> <div>M</div> </div>
+                        <div class="headingReadoutTRK fontSmall">TRK</div>
+                        <div class="headingReadoutTriangle"></div>
+                    </div>
+
+
+
+
+                    <!-- COMPASS FIXED/ROTATIVE -->
+                    <div id="compassContainer">
+                        
+                        <div id="compassFixed">
+                            <div class="bigTickLong" style="transform: rotate(0deg);"></div>
+                            <div class="bigTickLong" style="transform: rotate(45deg);"></div>
+                            <div class="bigTickLong" style="transform: rotate(-45deg);"></div>
+                            <div class="bigTickLong" style="transform: rotate(135deg);"></div>
+                            <div class="bigTickLong" style="transform: rotate(180deg);"></div>
+                            <div class="bigTickLong" style="transform: rotate(225deg);"></div>
+                        </div>
+                        
+                        <div id="compassFixedCircle">
+                            <img id="airplaneSymbol" src="images/planeSymbol.png">
+                        </div>
+
+
+
+                        <div id="bearingTypeContainer">
+                            <div id="bearingTypeContent">
+                                <div class="fontSmall2" id="bearingTypeLeft">
+                                    <div></div>
+                                    <div>GPS1</div>
+                                </div>
+                                <div class="fontSmall2" id="bearingTypeRight">
+                                    <div></div>
+                                    <div>GPS2</div>
+                                </div>
+                            </div>
+                            <div id="bearingTypeCircle"></div>
+                        </div>
+
+
+                        
+                        
+                        
+
+
+
+
+                        <div id="compassRotativeContainer">
+                            
+                            <div id="compassRotateiveIcons">
+
+                                
+                                <!-- CURRENT GROUND TRACK -->
+                                <div id="rotativeGroundTrackContainer">
+                                    <div id="rotativeGroundTrack">
+                                        <div id="rotativeGroundTrackLine">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div id="rotativeGroundTrackTriangle"></div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- ROTATIVE HEADING BUG -->
+                                <div id="rotativeHeadingBugContainer">
+                                    <div id="rotativeHeadingBug">
+                                        <svg width="11" height="28">
+                                            <path d="M 0 0 L 11 0 L 11 7 L 4 14 L 11 21 L 11 28 L 0 28 L 0 0" style="fill:#6dcad8;stroke:#000;stroke-width:1"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- BEARING POINTER 1 -- rotativeBearingVisible -->
+                                <div class="rotativeArrowContainer rotativeBearing rotativeBearingVisible" id="rotativeBearing1">
+                                    <div class="rotativeArrow">
+                                        <div class="rotativeArrowHeader"></div>
+                                        <div class="rotativeArrowTail"></div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- BEARING POINTER 2 -- rotativeBearingVisible -->
+                                <div class="rotativeArrowContainer rotativeBearing rotativeBearingVisible" id="rotativeBearing2">
+                                    <div class="rotativeArrow">
+
+                                        <div class="rotativeArrowHeader">
+                                            <div></div>
+                                            <div></div> 
+                                        </div>
+
+                                        <div class="rotativeArrowTail">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div> 
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                
+
+                                <!-- CDI -->
+                                <div class="rotativeArrowContainer rotativeCourseDeviationContainerMagenta" id="rotativeCourseDeviationContainer">
+                                    <div class="rotativeArrow">
+
+                                        <div class="rotativeArrowHeader">
+                                           <span>&#11165;</span>
+                                        </div>
+
+                                        <div class="rotativeArrowBody">
+
+                                            <div class="rotativeArrowBodyLine"></div>
+
+                                            <div class="rotativeArrowBodyContent">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rotativeArrowTail"></div>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+                            <div id="compassRotative">
+                                <!-- <div class="bigTickLong"> <div class="fontMedium">00</div> </div>
+                                <div class="miniTickShort"></div>
+                                <div class="miniTickLong"></div> -->
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <!-- MENU -- menuOpen -->
+                <div id="menuContainer">
+
+                    <div id="menuList" class="fontSmall2" position="0">
+                        <!-- ITEM -->
+                        <div class="menuItem menuItemActive" menu="back">
+                            <div class="menuLabel">Back</div>
+                            <div class="menuIcon">X</div>
+                        </div>
+                        <!-- ITEM -->
+                        <div class="menuItem" menu="heading">
+                            <div class="menuLabel">Heading</div>
+                            <div class="menuIcon">X</div>
+                        </div>
+                        <!-- ITEM -->
+                        <div class="menuItem" menu="altitude">
+                            <div class="menuLabel">Altitude</div>
+                            <div class="menuIcon">
+                                <div class="menuItemValue">0</div>
+                                <div class="unitContainer">
+                                    <div>f</div>
+                                    <div>t</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ITEM -->
+                        <div class="menuItem" menu="pitch">
+                            <div class="menuLabel">Pitch</div>
+                            <div class="menuIcon">X</div>
+                        </div>
+                        <!-- ITEM -->
+                        <div class="menuItem" menu="hsi">
+                            <div class="menuLabel">HSI</div>
+                            <div class="menuIcon">X</div>
+                        </div>
+                        <div class="menuItem" menu="teste">
+                            <div class="menuLabel">TESTE</div>
+                            <div class="menuIcon">
+                                <!-- menuIconToggleActive -->
+                                <div class="menuIconToggle "></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="menuScrollTrack">
+                        <div id="menuScrollThumb"></div>
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- POPUP SELECTOR -- popupSelectorOpen -->
+                <div id="popupSelectorContainer" class="">
+                    <div id="popupSelectorHeader" class="fontSmall2">Bearing Pointer 1</div>
+
+                    <div id="popupSelectorOptionList" class="fontMedium">
+                        <!-- <div class="popupSelectorOption popupSelectorOptionSelected">None</div>
+                        <div class="popupSelectorOption">GPS1</div> -->
+                    </div>
+
+                </div>
+
+
+                <!-- POPUP VALUE -- popupValueOpen -->
+                <div id="popupValueContainer" class="">
+                    <div id="popupValueHeader" class="fontSmall2">Select Heading</div>
+                    <div id="popupValue" class="fontMedium">353°</div>
+                </div>
+
+
+                <!-- POPUP COMFIRM -- popupConfirmOpen -->
+                <div id="popupConfirmContainer" class="">
+                    <div id="popupConfirmHeader">Restore default settings?</div>
+
+                    <div id="popupConfirmOptionList">
+                        <div class="popupConfirmOption popupConfirmOptionSelected">No</div>
+                        <div class="popupConfirmOption">Yes</div>
+                    </div>
+                </div>
+
+
+
+                <!-- DOCK SELECTOR - dockSelectorOpen -->
+                <div id="dockSelectorContainer" class="">
+                    <div id="dockSelectorHeader" class="fontSmall2">Setup</div>
+
+                    <div id="dockSelectorWrapperList">
+                        
+                        <!-- <div class="dockSelectorWrapper dockSelectorWrapperNormal dockSelectorButton dockSelectorSelected">
+                            <div class="dockSelectorIcon"></div>
+                            <div class="dockSelectorLabel fontSmall2">Back</div> 
+                        </div>
+                        
+                        <div class="dockSelectorWrapper dockSelectorWrapperNested">
+                            <div class="dockSelectorLabel fontSmall2">Bearing Pointer 1</div>
+                            <div class="dockSelectorButton fontSmall">GPS1</div>
+                        </div>
+
+                        <div class="dockSelectorWrapper dockSelectorWrapperNested">
+                            <div class="dockSelectorLabel fontSmall2">Bearing Pointer 2</div>
+                            <div class="dockSelectorButton fontSmall">VLOC2</div>
+                        </div> -->
+
+                    </div>
+                    
+                </div>
+
+
+
+                <!-- MESSAGES -- messageOpen -->
+                <div id="messageContainer" class="">
+                    <div id="messageHeader" class="fontSmall2">Message</div>
+                    <div id="messageText" class="fontSmall2">AGCS Preflight test failed</div>
+                </div>
+
+
+                
+
+                <!-- CONFIGURATION MODE (MAIN) -- configurationModeContainerOpen -->
+                <div id="configurationModeContainer" class="genericScrollable" position="0">
+                    <div id="configurationModeHeader" class="genericHeader fontMedium">Configuration Mode</div>
+
+                    <div class="genericContentWrapper">
+                        
+                        <div class="genericContentContainer genericContentContainerForMiniButton">
+                            <div class="genericMiniButton genericButtonSelected fontMedium">Device Information</div>
+                            <div class="genericMiniButton fontMedium">Atttiude</div>
+                            <div class="genericMiniButton fontMedium">Air Data</div>
+                            <div class="genericMiniButton fontMedium">Airspeed</div>
+                            <div class="genericMiniButton fontMedium">Magnetometer</div>
+                            <div class="genericMiniButton fontMedium">Flight Controls</div>
+                            <div class="genericMiniButton fontMedium">Backlight</div>
+                            <div class="genericMiniButton fontMedium">Display</div>
+                            <div class="genericMiniButton fontMedium">Battery</div>
+                            <div class="genericMiniButton fontMedium">GPS</div>
+                            <div class="genericMiniButton fontMedium">Navigation</div>
+                            <div class="genericMiniButton fontMedium">Units</div>
+                            <div class="genericMiniButton fontMedium">RS-232</div>
+                            <div class="genericMiniButton fontMedium">ARINC 429</div>
+                            <div class="genericMiniButton fontMedium">Exit Configuration Mode</div>
+                        </div>
+
+                        <div class="genericScrollTrack">
+                            <div class="genericScrollThumb"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- CONFIGURATION MODE (SCREEN) -- configurationModeScreenOpen -->
+                <div id="configurationModeScreen" class="genericScrollable" position="0">
+                    <div class="genericHeader fontMedium">Teste</div>
+
+                    <div class="genericContentWrapper">
+                        
+                        <div class="genericContentContainer genericContentContainerForBigButton">
+                            
+                            <!-- NORMAL -->
+                            <!-- <div class="genericBigButton genericBigButtonNormal fontSmall2 genericButtonSelected">
+                                <div class="genericBigButtonIcon"></div>
+                                <div class="genericBigButtonText">Texto Aqui</div>
+                            </div>  -->
+                            
+                            <!-- CELL -->
+                            <!-- <div class="genericBigButton genericBigButtonCell fontSmall2">
+
+                                <div class="genericBigButtonCellWrapper">
+                                    <div class="genericCheckbox genericCheckboxChecked">
+                                        <div class="genericCheckboxMark">&check;</div>
+                                    </div>
+                                    <div class="genericBigButtonText">Texto Aqui</div>
+                                </div>
+
+                                <div class="genericBigButtonCellWrapper">B</div>
+                                <div class="genericBigButtonCellWrapper">C</div>
+                            </div> -->
+                            
+                            <!-- CELL RIGHT or CELL RIGHT + BUTTON -->
+                            <!-- <div class="genericBigButton genericBigButtonCellRight fontSmall2">
+                                <div class="genericBigButtonCellWrapper">A</div>
+                                <div class="genericBigButtonCellWrapper">B</div> 
+                                <div class="genericBigButtonCellWrapper">
+                                    <div class="genericBigButtonNestedButton">Valor Aqui</div>
+                                </div>
+                            </div> -->
+
+                            <!-- NESTED -->
+                            <!-- <div class="genericBigButton genericBigButtonNested fontSmall2 genericBigButtonDisabled">
+                                <div class="genericBigButtonNestedText">Texto Aqui</div>
+                                <div class="genericBigButtonNestedButton">Valor Aqui</div>
+                            </div> -->
+
+                            <!-- NORMAL -->
+                            <!-- <div class="genericBigButton genericBigButtonNormal fontSmall2">
+                                <div class="genericBigButtonIcon"></div>
+                                <div class="genericBigButtonText">Texto Aqui 2</div>
+                            </div> -->
+                            
+                        </div>
+
+
+                        <div class="genericScrollTrack">
+                            <div class="genericScrollThumb"></div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <!-- POPUP CONNECTION -- popupConnectionOpen -->
+                <div id="popupConnection" class="">
+
+                    <div id="popupConnectionHeader" class="fontSmall2">Connection</div>
+
+                    <div id="popupConnectionList">
+                        
+                        <div class="dockSelectorWrapper dockSelectorWrapperNormal dockSelectorButton dockSelectorHovered">
+                            <div class="dockSelectorIcon"></div>
+                            <div class="dockSelectorLabel fontSmall2">Back</div> 
+                        </div>
+                        
+                        
+
+                        <div class="dockSelectorWrapper dockSelectorWrapperNested">
+                            <div class="dockSelectorLabel fontSmall2">IP</div>
+                            <div class="dockSelectorButtonList fontSmall">
+                                <div class="dockSelectorButton" max="255">0</div>.
+                                <div class="dockSelectorButton" max="255">0</div>.
+                                <div class="dockSelectorButton" max="255">0</div>.
+                                <div class="dockSelectorButton" max="255">0</div>
+                            </div>
+                        </div>
+
+                        <div class="dockSelectorWrapper dockSelectorWrapperNested">
+                            <div class="dockSelectorLabel fontSmall2">Port</div>
+                            <div class="dockSelectorButton fontSmall" max="65535">3224</div>
+                        </div>
+
+                        <div class="dockSelectorWrapper dockSelectorWrapperNormal dockSelectorButton">
+                            <div class="dockSelectorIcon"></div>
+                            <div class="dockSelectorLabel fontSmall2">Connect</div> 
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <!-- LCD STATE -- lcdStateDisabled -->
+                <div id="lcdStateScreen" class="lcdStateDisabled"></div>
+
+
+
+                <!-- SPLASH SCREEN -- splashScreenOpen -->
+                <div id="splashScreen" class="">
+                    <div id="splashLogo">
+                        <img src="images/logo.png" width="100%">
+                    </div>
+                    <div id="splashFooter" class="fontSmall2">
+                        <div>G5 5.00</div>
+                        <div>Copyright 2016-2017</div>
+                        <div>Garmin Ltd. or its subsidiaries</div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+     
+    
+    <script src="scripts/generators.js"></script>
+    <script src="scripts/clickEvents.js"></script>
+    <script src="scripts/knobEvents.js"></script>
+    <script src="scripts/keyboardEvents.js"></script>
+    <script src="scripts/definitions.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/connection.js"></script>
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+/*** MESSAGE ***/
+#messageContainer{
+    width: 100%;
+    height: 64px;
+    border: 2px solid #ababa9;
+    border-radius: 4px;
+    background: linear-gradient(#636363, #000 20px);
+    z-index: 10;
+    bottom: 0;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    transition: 100ms;
+    transform: translateY(0);
+}
+
+#messageContainer:not(.messageOpen){
+    transform: translateY(100%);
+}
+
+#messageHeader{
+    text-align: center;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+#messageText{
+    border: 1px solid #9e9e9e;
+    padding: 6px 4px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

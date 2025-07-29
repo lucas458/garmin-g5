@@ -1,0 +1,33 @@
+
+/****** SPLASH SCREEN ******/
+
+#splashScreen{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+    opacity: 1;
+    transition: 1500ms;
+    pointer-events: none;
+}
+
+#splashScreen:not(.splashScreenOpen){
+    opacity: 0;
+    transition: 500ms;
+}
+
+#splashLogo{
+    padding: 30px;
+}
+
+#splashFooter{
+    text-align: center;
+    padding-bottom: 8px;
+    font-weight: 600;
+}

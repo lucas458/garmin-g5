@@ -1,0 +1,57 @@
+
+#popupConfirmContainer{
+    /* width: fit-content; */
+    width: 250px;
+    height: 120px;
+    
+    background-color: #000;
+    border: 2px solid #ababa9;
+    border-radius: 4px;
+    padding: 4px;
+    padding-bottom: 16px;
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    /* transform: translateY(0px); */
+    transition: 200ms;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#popupConfirmContainer:not(.popupConfirmOpen){
+    transform: translateY(100%); 
+    top: 100%;
+}
+
+
+#popupConfirmHeader{
+    text-align: center;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+
+#popupConfirmOptionList{
+    display: flex;
+    gap: 18px;
+}
+
+.popupConfirmOption{
+    width: 64px;
+    background: linear-gradient(#636363, #000 20px);
+    padding: 4px 0;
+    border: 2px solid #ababa9;
+}
+
+.popupConfirmOptionSelected{
+    border-color: cyan;
+}
