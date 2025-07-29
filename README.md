@@ -33,7 +33,8 @@
 ![Configuração](https://github.com/lucas458/garmin-g5/blob/main/RAW_IMAGES/confiScreen.png?raw=true "Configuração")
 #### precione e segure o KNOB na tela FPD para abrir
 
-**NOTE!** apenas o **AirSpeed** está implementado
+> [!NOTE]  
+> apenas o **AirSpeed** está implementado
 
 ### Conexão
 ![Conexão](https://github.com/lucas458/garmin-g5/blob/main/RAW_IMAGES/connection.png "Conexão")
@@ -55,3 +56,13 @@
 * Icone de bateria
 * Melhorias no Vertical Speed
 * Melhorias nos Annunciators
+
+
+
+
+
+
+
+
+
+
