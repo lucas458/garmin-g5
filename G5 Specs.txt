@@ -1,0 +1,15 @@
+Physical & Performance:
+
+Electrical  				: 14 or 28 VDC aircraft power
+Unit size   				: 3.4"W x 3.6"H x 3.0"D (86.4 x 91.4 x 76.2 mm)
+Weight      				: 13.3 oz (377.0 g) unit
+Display size				: 3.5" diagonal (88.9 mm diagonal)
+Display resolution			: 320 x 240 pixels (QVGA), LED backlit color LCD
+Receiver					: High-sensitivity GPS
+Maximum indicated airspeed	: 300 kts
+Altitude range				: -1,400 – +30,000 ft
+Vertical speed range		: ± 20,000 ft/minute
+Pitch/roll range			: ±360°
+Backup battery (optional)	: Rechargeable lithium-ion
+Battery life				: Up to 4 hours
+Vspeed references including	: VNE, Vno, Vso, Vs1, Vfe, Va, Vx, Vy, VYse, Vg, Vr, are displayed on the G5 
