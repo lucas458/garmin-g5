@@ -13,6 +13,7 @@ var AIRPLANE = {
     baro: '29.92',
     ladderStep: 10,
     slip: 0,
+    turnRate: 0,
 
     headingViewMode: {
         isTrack: false,
