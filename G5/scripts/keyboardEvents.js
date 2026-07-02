@@ -30,6 +30,13 @@ var KEYCONTROLLER = {
         pressed: false,
         event: null,
         callback: (event) => {
+
+            if ( event.shiftKey ){
+                AIRPLANE.flightDirectorHorizontal = Math.clamp(AIRPLANE.flightDirectorHorizontal-1, -46, 46);
+                setFlightDirectorPositions(AIRPLANE.flightDirectorHorizontal, AIRPLANE.flightDirectorVertical);
+                return;
+            }
+
             AIRPLANE.IMU.pitch = Math.clamp(AIRPLANE.IMU.pitch - Math.cos(AIRPLANE.IMU.roll*Math.PI/180) ,-90,90);
             setAttitude(AIRPLANE.IMU.pitch,AIRPLANE.IMU.roll,AIRPLANE.IMU.yaw);
         }
@@ -38,6 +45,13 @@ var KEYCONTROLLER = {
         pressed: false,
         event: null,
         callback: (event) => {
+
+            if ( event.shiftKey ){
+                AIRPLANE.flightDirectorHorizontal = Math.clamp(AIRPLANE.flightDirectorHorizontal+1, -46, 46);
+                setFlightDirectorPositions(AIRPLANE.flightDirectorHorizontal, AIRPLANE.flightDirectorVertical);
+                return;
+            }
+
             AIRPLANE.IMU.pitch = Math.clamp(AIRPLANE.IMU.pitch+ Math.cos(AIRPLANE.IMU.roll*Math.PI/180) ,-90,90);
             setAttitude(AIRPLANE.IMU.pitch,AIRPLANE.IMU.roll,AIRPLANE.IMU.yaw);
         }
@@ -48,6 +62,13 @@ var KEYCONTROLLER = {
         pressed: false,
         event: null,
         callback: (event) => {
+
+            if ( event.shiftKey ){
+                AIRPLANE.flightDirectorVertical = Math.clamp(AIRPLANE.flightDirectorVertical-1, -46, 46);
+                setFlightDirectorPositions(AIRPLANE.flightDirectorHorizontal, AIRPLANE.flightDirectorVertical);
+                return;
+            }
+
             AIRPLANE.IMU.roll--;
             if ( AIRPLANE.IMU.roll < -180 ){
                 AIRPLANE.IMU.roll = 180;
@@ -59,6 +80,13 @@ var KEYCONTROLLER = {
         pressed: false,
         event: null,
         callback: (event) => {
+
+            if ( event.shiftKey ){
+                AIRPLANE.flightDirectorVertical = Math.clamp(AIRPLANE.flightDirectorVertical+1, -46, 46);
+                setFlightDirectorPositions(AIRPLANE.flightDirectorHorizontal, AIRPLANE.flightDirectorVertical);
+                return;
+            }
+
             AIRPLANE.IMU.roll++;
             if ( AIRPLANE.IMU.roll > 180 ){
                 AIRPLANE.IMU.roll = -180;
