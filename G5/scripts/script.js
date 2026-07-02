@@ -1291,7 +1291,7 @@ function disableMasterAnnunciatorVertical(){
 
 function keyboardUpdate(){
     Object.keys(KEYCONTROLLER).forEach(keyName => {
-        KEYCONTROLLER[keyName].pressed && KEYCONTROLLER[keyName].callback();
+        KEYCONTROLLER[keyName].pressed && KEYCONTROLLER[keyName].callback(KEYCONTROLLER[keyName].event);
     });
     requestAnimationFrame(keyboardUpdate);
 }
