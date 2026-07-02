@@ -129,6 +129,13 @@ var KEYCONTROLLER = {
         pressed: false,
         event: null,
         callback: (event) => {
+
+            if ( event.shiftKey ){
+                AIRPLANE.slip = Math.clamp(AIRPLANE.slip-1, -100, 100);
+                setSlipIndicatorBall(AIRPLANE.slip);
+                return;
+            }
+
             AIRPLANE.IMU.yaw--;
             if ( AIRPLANE.IMU.yaw < 0 ){
                 AIRPLANE.IMU.yaw = 359;
@@ -140,6 +147,13 @@ var KEYCONTROLLER = {
         pressed: false,
         event: null,
         callback: (event) => {
+
+            if ( event.shiftKey ){
+                AIRPLANE.slip = Math.clamp(AIRPLANE.slip+1, -100, 100);
+                setSlipIndicatorBall(AIRPLANE.slip);
+                return;
+            }
+
             AIRPLANE.IMU.yaw = (AIRPLANE.IMU.yaw + 1) % 360;
             setAttitude(AIRPLANE.IMU.pitch,AIRPLANE.IMU.roll,AIRPLANE.IMU.yaw);
         }
