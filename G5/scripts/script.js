@@ -361,6 +361,19 @@ function setLocalizerThumbType(isDiamond = false, isDiamondGreen = false){
 }
 
 
+
+function setGlidePosition( percent = 0 ){
+    percent = Math.clamp(percent, -100, 100);
+    glideslopeContainer.querySelector('.glideLocalizerThumbContainer > div').style.transform = `translateX(${map(percent, -100, 100, -45, 45)}px)`;
+}
+
+
+function setLocalizerPosition( percent ){
+    percent = Math.clamp(percent, -100, 100);
+    localizerContainer.querySelector('.glideLocalizerThumbContainer > div').style.transform = `translateX(${map(percent, -100, 100, -45, 45)}px)`;
+}
+
+
 function setTurnRateTrend( percent = 0 ){
     percent = Math.clamp(percent, -100, 100);
     const absolutePercent = Math.abs(percent);
