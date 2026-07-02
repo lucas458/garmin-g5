@@ -1,9 +1,12 @@
 
 
 onkeyup = onblur = (event) => {
-    if ( KEYCONTROLLER[event.key] ){
-        KEYCONTROLLER[event.key].pressed = false;
-        KEYCONTROLLER[event.key].event = event;
+    
+    const KEY_NAME = (event.key != undefined && event.key.length == 1)? event.key.toLowerCase() : event.key;
+
+    if ( KEYCONTROLLER[KEY_NAME] ){
+        KEYCONTROLLER[KEY_NAME].pressed = false;
+        KEYCONTROLLER[KEY_NAME].event = event;
     } 
 
     if ( event.type == 'blur' ){
@@ -13,10 +16,12 @@ onkeyup = onblur = (event) => {
 
 
 onkeydown = (event) => {
+    
+    const KEY_NAME = (event.key != undefined && event.key.length == 1)? event.key.toLowerCase() : event.key;
 
-    if ( KEYCONTROLLER[event.key] ){
-        KEYCONTROLLER[event.key].pressed = true;
-        KEYCONTROLLER[event.key].event = event;
+    if ( KEYCONTROLLER[KEY_NAME] ){
+        KEYCONTROLLER[KEY_NAME].pressed = true;
+        KEYCONTROLLER[KEY_NAME].event = event;
         return;
     }
     
