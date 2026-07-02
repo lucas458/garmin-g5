@@ -37,6 +37,12 @@ var KEYCONTROLLER = {
                 return;
             }
 
+            if ( event.ctrlKey ){
+                AIRPLANE.glideslope.value = Math.clamp(AIRPLANE.glideslope.value-1, -100, 100);
+                setGlidePosition(AIRPLANE.glideslope.value);
+                return;
+            }
+
             AIRPLANE.IMU.pitch = Math.clamp(AIRPLANE.IMU.pitch - Math.cos(AIRPLANE.IMU.roll*Math.PI/180) ,-90,90);
             setAttitude(AIRPLANE.IMU.pitch,AIRPLANE.IMU.roll,AIRPLANE.IMU.yaw);
         }
@@ -49,6 +55,12 @@ var KEYCONTROLLER = {
             if ( event.shiftKey ){
                 AIRPLANE.flightDirectorHorizontal = Math.clamp(AIRPLANE.flightDirectorHorizontal+1, -46, 46);
                 setFlightDirectorPositions(AIRPLANE.flightDirectorHorizontal, AIRPLANE.flightDirectorVertical);
+                return;
+            }
+
+            if ( event.ctrlKey ){
+                AIRPLANE.glideslope.value = Math.clamp(AIRPLANE.glideslope.value+1, -100, 100);
+                setGlidePosition(AIRPLANE.glideslope.value);
                 return;
             }
 
@@ -69,6 +81,12 @@ var KEYCONTROLLER = {
                 return;
             }
 
+            if ( event.ctrlKey ){
+                AIRPLANE.localizer.value = Math.clamp(AIRPLANE.localizer.value-1, -100, 100);
+                setLocalizerPosition(AIRPLANE.localizer.value);
+                return;
+            }
+
             AIRPLANE.IMU.roll--;
             if ( AIRPLANE.IMU.roll < -180 ){
                 AIRPLANE.IMU.roll = 180;
@@ -84,6 +102,12 @@ var KEYCONTROLLER = {
             if ( event.shiftKey ){
                 AIRPLANE.flightDirectorVertical = Math.clamp(AIRPLANE.flightDirectorVertical+1, -46, 46);
                 setFlightDirectorPositions(AIRPLANE.flightDirectorHorizontal, AIRPLANE.flightDirectorVertical);
+                return;
+            }
+
+            if ( event.ctrlKey ){
+                AIRPLANE.localizer.value = Math.clamp(AIRPLANE.localizer.value+1, -100, 100);
+                setLocalizerPosition(AIRPLANE.localizer.value);
                 return;
             }
 
