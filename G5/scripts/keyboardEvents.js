@@ -136,6 +136,12 @@ var KEYCONTROLLER = {
                 return;
             }
 
+            if ( event.ctrlKey ){
+                AIRPLANE.turnRate = Math.clamp(AIRPLANE.turnRate-1, -100, 100);
+                setTurnRateTrend(AIRPLANE.turnRate);
+                return;
+            }
+
             AIRPLANE.IMU.yaw--;
             if ( AIRPLANE.IMU.yaw < 0 ){
                 AIRPLANE.IMU.yaw = 359;
@@ -151,6 +157,12 @@ var KEYCONTROLLER = {
             if ( event.shiftKey ){
                 AIRPLANE.slip = Math.clamp(AIRPLANE.slip+1, -100, 100);
                 setSlipIndicatorBall(AIRPLANE.slip);
+                return;
+            }
+
+            if ( event.ctrlKey ){
+                AIRPLANE.turnRate = Math.clamp(AIRPLANE.turnRate+1, -100, 100);
+                setTurnRateTrend(AIRPLANE.turnRate);
                 return;
             }
 
