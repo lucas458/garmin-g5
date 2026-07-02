@@ -1,7 +1,7 @@
 
 
 onkeyup = onblur = (event) => {
-    
+    event.preventDefault();
     const KEY_NAME = (event.key != undefined && event.key.length == 1)? event.key.toLowerCase() : event.key;
 
     if ( KEYCONTROLLER[KEY_NAME] ){
@@ -16,7 +16,7 @@ onkeyup = onblur = (event) => {
 
 
 onkeydown = (event) => {
-    
+    event.preventDefault();
     const KEY_NAME = (event.key != undefined && event.key.length == 1)? event.key.toLowerCase() : event.key;
 
     if ( KEYCONTROLLER[KEY_NAME] ){
