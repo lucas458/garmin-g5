@@ -210,6 +210,59 @@ var KEYCONTROLLER = {
     },
 
 
+    // AUTOPILOT: SPEED
+    "!": {
+        pressed: false,
+        event: null,
+        defaultRepeat: true,
+        callback: (event) => {
+            if ( event.shiftKey ){
+                AIRPLANE.selectedSpeed = Math.clamp(AIRPLANE.selectedSpeed-5, 0, 300);
+                setSelectedSpeed(AIRPLANE.selectedSpeed);
+                return;
+            }
+        }
+    },
+    "@": {
+        pressed: false,
+        event: null,
+        defaultRepeat: true,
+        callback: (event) => {
+            if ( event.shiftKey ){
+                AIRPLANE.selectedSpeed = Math.clamp(AIRPLANE.selectedSpeed+5, 0, 300);
+                setSelectedSpeed(AIRPLANE.selectedSpeed);
+                return;
+            }
+        }
+    },
+
+
+    // AUTOPILOT: ALTITUDE
+    "#": {
+        pressed: false,
+        event: null,
+        defaultRepeat: true,
+        callback: (event) => {
+            if ( event.shiftKey ){
+                AIRPLANE.selectedAltitude = Math.clamp(AIRPLANE.selectedAltitude-100, -1400, 30000);
+                setAutopilotAltitude(AIRPLANE.selectedAltitude);
+                return;
+            }
+        }
+    },
+    "$": {
+        pressed: false,
+        event: null,
+        defaultRepeat: true,
+        callback: (event) => {
+            if ( event.shiftKey ){
+                AIRPLANE.selectedAltitude = Math.clamp(AIRPLANE.selectedAltitude+100, -1400, 30000);
+                setAutopilotAltitude(AIRPLANE.selectedAltitude);
+                return;
+            } 
+        }
+    },
+
 };
 
 
