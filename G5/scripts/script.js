@@ -902,7 +902,7 @@ function turnOn(){
     setTimeout(()=>{
         toggleLCD(false);
         toggleSplashScreen(false);
-    }, 1); // 2000
+    }, 2000); // 2000
 }
 
 
@@ -1427,7 +1427,7 @@ onload = () => {
 
 
     // Boot Screen
-    setTimeout(turnOn, 1); // 500
+    setTimeout(turnOn, 500); // 500
 
 
 
