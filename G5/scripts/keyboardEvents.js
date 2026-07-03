@@ -177,6 +177,13 @@ var KEYCONTROLLER = {
         pressed: false,
         event: null,
         callback: (event) => {
+
+            if ( event.ctrlKey ){
+                AIRPLANE.speedTrend = Math.clamp(AIRPLANE.speedTrend-1, -300, 300);
+                setAirSpeedTrend(AIRPLANE.speedTrend);
+                return;
+            }
+
             AIRPLANE.speed = Math.clamp(AIRPLANE.speed-0.1, 0, 300);
             setSpeed(AIRPLANE.speed);
         }
@@ -185,6 +192,13 @@ var KEYCONTROLLER = {
         pressed: false,
         event: null,
         callback: (event) => {
+
+            if ( event.ctrlKey ){
+                AIRPLANE.speedTrend = Math.clamp(AIRPLANE.speedTrend+1, -300, 300);
+                setAirSpeedTrend(AIRPLANE.speedTrend);
+                return;
+            }
+
             AIRPLANE.speed = Math.clamp(AIRPLANE.speed+0.1, 0, 300);
             setSpeed(AIRPLANE.speed);
         }
