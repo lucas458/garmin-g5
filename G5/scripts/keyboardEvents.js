@@ -210,6 +210,25 @@ var KEYCONTROLLER = {
     },
 
 
+    // VERTICAL SPEED
+    "5": {
+        pressed: false,
+        event: null,
+        callback: (event) => {
+            AIRPLANE.verticalSpeed = Math.clamp(AIRPLANE.verticalSpeed-1, -AIRPLANE.verticalSpeedLimitToView, AIRPLANE.verticalSpeedLimitToView);
+            setVerticalSpeed(AIRPLANE.verticalSpeed);
+        }
+    },
+    "6": {
+        pressed: false,
+        event: null,
+        callback: (event) => {
+            AIRPLANE.verticalSpeed = Math.clamp(AIRPLANE.verticalSpeed+1, -AIRPLANE.verticalSpeedLimitToView, AIRPLANE.verticalSpeedLimitToView);
+            setVerticalSpeed(AIRPLANE.verticalSpeed);
+        }
+    },
+
+
     // AUTOPILOT: SPEED
     "!": {
         pressed: false,

@@ -10,6 +10,7 @@ var AIRPLANE = {
     speed: 0,
     altitude: 0,
     verticalSpeed: 0,
+    verticalSpeedLimitToView: 2000,
     baro: '29.92',
     ladderStep: 10,
     slip: 0,
