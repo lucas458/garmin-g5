@@ -395,6 +395,15 @@ function setSlipIndicatorBall( percent = 0 ){
 
 
 
+function setAirSpeedTrend( speed = 0 ){
+    speed = Math.clamp(speed, -300, 300);
+    let height = map(Math.abs(speed), 0, 300, 0, 40*30);
+    height = Math.clamp(height, 0, 113);
+    AirSpeedTrendVector.style.transform = `scaleY(${Math.sign(-speed)})`;
+    AirSpeedTrendVector.style.height = `${height}px`;
+}
+
+
 
 
 function setGroundspeed( value = 0 ){
@@ -893,7 +902,7 @@ function turnOn(){
     setTimeout(()=>{
         toggleLCD(false);
         toggleSplashScreen(false);
-    }, 2000); // 2000
+    }, 1); // 2000
 }
 
 
@@ -1418,7 +1427,7 @@ onload = () => {
 
 
     // Boot Screen
-    setTimeout(turnOn, 500); // 500
+    setTimeout(turnOn, 1); // 500
 
 
 

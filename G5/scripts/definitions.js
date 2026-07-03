@@ -15,6 +15,7 @@ var AIRPLANE = {
     ladderStep: 10,
     slip: 0,
     turnRate: 0,
+    speedTrend: 0,
 
     headingViewMode: {
         isTrack: false,
