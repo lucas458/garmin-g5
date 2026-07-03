@@ -237,11 +237,11 @@ function updateSelectedSpeed(){
     let posY = map(diff, 0, 300, 0, 1200);
 
     if ( pseudoLeftContainer.classList.contains("showGroundSpeedAndTemperature") ){
-        posY = Math.clamp(posY, -113, 79);
+        posY = Math.clamp(posY, -93, 79);
     }else if ( pseudoLeftContainer.classList.contains("showGroundSpeedOnly") ){
-        posY = Math.clamp(posY, -113, 92);
+        posY = Math.clamp(posY, -93, 92);
     }else{
-        posY = Math.clamp(posY, -113, 112);
+        posY = Math.clamp(posY, -93, 112);
     } 
 
     speedBug.style.transform = `translateY(${posY}px)`;
@@ -262,7 +262,13 @@ function updateSelectedAltitude(){
         posY = map(diff, -1400, 0, -840, 0);
     }
 
-    posY = Math.clamp(posY, -93, 93);
+    
+    if ( verticalSpeedDesired.classList.contains('verticalSpeedDesiredVisible') ){
+        posY = Math.clamp(posY, -93, 73);
+    }else{
+        posY = Math.clamp(posY, -93, 93);
+    }
+
     altitudeBug.style.transform = `translateY(${posY}px)`;
 
 
